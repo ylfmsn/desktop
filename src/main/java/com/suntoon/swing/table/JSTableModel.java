@@ -125,14 +125,14 @@ public abstract class JSTableModel<T> extends DefaultTableModel implements Table
     }
 
     //是否在retrieve的时候加入空白行
-    private boolean retrieveWidthEmptyRow = false;
+    private boolean retrieveWithEmptyRow = false;
 
-    public boolean isRetrieveWidthEmptyRow() {
-        return retrieveWidthEmptyRow;
+    public boolean isRetrieveWithEmptyRow() {
+        return retrieveWithEmptyRow;
     }
 
-    public void setRetrieveWidthEmptyRow(boolean retrieveWidthEmptyRow) {
-        this.retrieveWidthEmptyRow = retrieveWidthEmptyRow;
+    public void setRetrieveWithEmptyRow(boolean retrieveWidthEmptyRow) {
+        this.retrieveWithEmptyRow = retrieveWidthEmptyRow;
     }
 
     //保护起来的单元格 存储格式为行列
