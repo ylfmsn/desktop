@@ -41,15 +41,15 @@ public class JSTableInvertSelectAction extends JSTableBaseAction {
     }
 
     //当前选中字段的分选中值 默认是数字1
-    private Object seletedValue = Integer.valueOf(1);
+    private Object selectedValue = Integer.valueOf(1);
 
 
     public Object getSelectedValue() {
-        return seletedValue;
+        return selectedValue;
     }
 
-    public void setSeletedValue(Object seletedValue) {
-        this.seletedValue = seletedValue;
+    public void setSelectedValue(Object selectedValue) {
+        this.selectedValue = selectedValue;
     }
 
     //当前选中字段的非选中值 默认是数字0
