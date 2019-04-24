@@ -88,12 +88,18 @@ public class JSTableDefaultBuilderImpl<E> implements JSTableBuilder<Collection<E
 
     @Override
     public JSTableModel<Collection<E>> getTableModel() throws Exception {
-        return null;
+        if (this.tableModel == null)
+            this.tableModel = buildTableModel();
+
+        return this.tableModel;
     }
 
     @Override
     public JSTableColumnModel getTableColumnModel() throws Exception {
-        return null;
+        if (this.colModel == null)
+            this.colModel = buildTableColumnModel();
+
+        return this.colModel;
     }
 
     @Override

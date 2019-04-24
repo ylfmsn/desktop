@@ -18,152 +18,152 @@ public class ResourceLoader {
     /**
      * 工具栏图标
      */
-    public static final String IMAGE_STATIC = "/swing/iconfont-stack2.png";
+    public static final String IMAGE_STATIC = "swing/iconfont-stack2.png";
 
     /**
      * 监视器图标
      */
-    public static final String IMAGE_MONITOR = "/swing/iconfont-monitor.png";
+    public static final String IMAGE_MONITOR = "swing/iconfont-monitor.png";
 
     /**
      * 播放按钮
      */
-    public static final String IMAGE_PLAY = "/swing/Play16x16.png";
+    public static final String IMAGE_PLAY = "swing/Play16x16.png";
 
     /**
      * 暂停按钮
      */
-    public static final String IMAGE_PAUSE = "/swing/Pause16x16.png";
+    public static final String IMAGE_PAUSE = "swing/Pause16x16.png";
 
     /**
      * 停止按钮
      */
-    public static final String IMAGE_STOP = "/swing/Stop16x16.png";
+    public static final String IMAGE_STOP = "swing/Stop16x16.png";
 
     /**
      * 停止动画按钮
      */
-    public static final String IMAGE_STOP_PRESS = "/swing/StopPress16x16.png";
+    public static final String IMAGE_STOP_PRESS = "swing/StopPress16x16.png";
 
     /**
      * 开始仿真图标
      */
-    public static final String IMAGE_START_SIMULATOR = "/swing/export.png";
+    public static final String IMAGE_START_SIMULATOR = "swing/export.png";
 
     /**
      * 停止仿真图标
      */
-    public static final String IMAGE_STOP_SIMULATOR = "/swing/exit.png";
+    public static final String IMAGE_STOP_SIMULATOR = "swing/exit.png";
 
     /**
      * 打开功能树窗口图标
      */
-    public static final String IMAGE_OPEN_NAVIGATION = "/swing/large_clipart.png";
+    public static final String IMAGE_OPEN_NAVIGATION = "swing/large_clipart.png";
 
     /**
      * 打开仿真窗口图标
      */
-    public static final String IMAGE_OPEN_SIMULATOR = "/swing/Nitrogen.png";
+    public static final String IMAGE_OPEN_SIMULATOR = "swing/Nitrogen.png";
 
     /**
      * 打开图层窗口图标
      */
-    public static final String IMAGE_OPEN_LAYER = "/swing/add.png";
+    public static final String IMAGE_OPEN_LAYER = "swing/add.png";
 
     /**
      * 打开日志窗口图标
      */
-    public static final String IMAGE_OPEN_LOG = "/swing/filter.png";
+    public static final String IMAGE_OPEN_LOG = "swing/filter.png";
 
     /**
      * 打开图层窗口图标
      */
-    public static final String IMAGE_RETRIEVE = "/swing/filter.png";
+    public static final String IMAGE_RETRIEVE = "swing/filter.png";
 
     /**
      * 新增操作按钮
      */
-    public static final String IMAGE_NEW = "/swing/new.png";
+    public static final String IMAGE_NEW = "swing/new.png";
 
     /**
      * 新增操作按钮
      */
-    public static final String IMAGE_ADD_SMALL = "/swing/edit_add.png";
+    public static final String IMAGE_ADD_SMALL = "swing/edit_add.png";
 
     /**
      * 移除操作小图片
      */
-    public static final String IMAGE_DEL_SMALL = "/swing/edit_remove.png";
+    public static final String IMAGE_DEL_SMALL = "swing/edit_remove.png";
 
     /**
      * 移除操作小图片
      */
-    public static final String IMAGE_INSERT_SMALL = "/swing/insert.png";
+    public static final String IMAGE_INSERT_SMALL = "swing/insert.png";
 
     /**
      * 修改按钮
      */
-    public static final String IMAGE_MODIFY = "/swing/pencil.png";
+    public static final String IMAGE_MODIFY = "swing/pencil.png";
 
     /**
      * 删除按钮
      */
-    public static final String IMAGE_DELETE = "/swing/delete.png";
+    public static final String IMAGE_DELETE = "swing/delete.png";
 
     /**
      * 保存按钮
      */
-    public static final String IMAGE_SAVE = "/swing/save.png";
+    public static final String IMAGE_SAVE = "swing/save.png";
 
     /**
      * 导入图片
      */
-    public static final String IMAGE_IMPORT = "/swing/large_smartart.png";
+    public static final String IMAGE_IMPORT = "swing/large_smartart.png";
 
     /**
      * 导出图片
      */
-    public static final String IMAGE_EXPORT = "/swing/large_shapes.png";
+    public static final String IMAGE_EXPORT = "swing/large_shapes.png";
 
     /**
      * 上移图片
      */
-    public static final String IMAGE_UP = "/swing/upenable.png";
+    public static final String IMAGE_UP = "swing/upenable.png";
 
     /**
      * 下移图片
      */
-    public static final String IMAGE_DOWN = "/swing/downenable.png";
+    public static final String IMAGE_DOWN = "swing/downenable.png";
 
     /**
      * 查询图片
      */
-    public static final String IMAGE_FIND = "/swing/find.png";
+    public static final String IMAGE_FIND = "swing/find.png";
 
     /**
      * 程序的logo
      */
-    public static final String IMAGE_LOGO = "/swing/logo.png";
+    public static final String IMAGE_LOGO = "swing/logo.png";
 
     /**
      * 选中
      */
-    public static final String IMAGE_SELECT = "/swing/select.png";
+    public static final String IMAGE_SELECT = "swing/select.png";
 
     /**
      * 未选中
      */
-    public static final String IMAGE_UNSELECT = "/swing/unselect.png";
+    public static final String IMAGE_UNSELECT = "swing/unselect.png";
 
     /**
      * 反选
      */
-    public static final String IMAGE_INVERT_SELECT = "/swing/invertselect16.png";
+    public static final String IMAGE_INVERT_SELECT = "swing/invertselect16.png";
 
     /**
      * 向下的箭头
      */
-    public static final String IMAGE_DOWN_ARROW = "/swing/down.png";
+    public static final String IMAGE_DOWN_ARROW = "swing/down.png";
 
     // end
 

@@ -9,7 +9,7 @@ import java.util.EventListener;
 /**
  * @ProjectionName desktop
  * @ClassName JSFontChooserDialog
- * @Description //颜色选择对话框
+ * @Description //字体选择对话框
  * @Author YueLifeng
  * @Date 2019/4/16 0016上午 10:25
  * @Version 1.0
@@ -32,7 +32,7 @@ public class JSFontChooserDialog extends JSDialog {
 
     /**
      * @Author YueLifeng
-     * @Description //设置颜色选择事件
+     * @Description //设置字体选择事件
      * @Date 下午 2:18 2019/4/16 0016
      * @param l
      * @return void
@@ -54,7 +54,7 @@ public class JSFontChooserDialog extends JSDialog {
 
     /**
      * @Author YueLifeng
-     * @Description //颜色选择对话框
+     * @Description //字体选择对话框
      * @Date 下午 2:31 2019/4/16 0016
      * @param
      * @return
@@ -80,14 +80,14 @@ public class JSFontChooserDialog extends JSDialog {
      */
     private void initCompents() {
 
-        getContentPane().setLayout(new BorderLayout());
+        getContentPane().setLayout(new BorderLayout(0, 0));
         setTitle("字体选择器");
 
         fontChooser = new JSFontChooserPanel();
         getContentPane().add(fontChooser, BorderLayout.CENTER);
 
         JPanel panel = new JPanel();
-        getContentPane().add(panel, BorderLayout.CENTER);
+        getContentPane().add(panel, BorderLayout.SOUTH);
         panel.setLayout(new FlowLayout(FlowLayout.RIGHT, 5, 5));
 
         btnOk = new JButton("确定");
@@ -125,7 +125,7 @@ public class JSFontChooserDialog extends JSDialog {
 
     /**
      * @Author YueLifeng
-     * @Description //设置颜色的操作
+     * @Description //设置字体的操作
      * @Date 下午 2:15 2019/4/16 0016
 
      * @return

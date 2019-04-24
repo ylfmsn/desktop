@@ -66,6 +66,7 @@ public class JSColorChooserDialog extends JSDialog {
     private void initCompents() {
         getContentPane().setLayout(new BorderLayout(0, 0));
         setTitle("颜色选择器");
+        colorChooser = new JColorChooser();
 
         getContentPane().add(colorChooser, BorderLayout.CENTER);
 
@@ -114,6 +115,4 @@ public class JSColorChooserDialog extends JSDialog {
         //取消操作
         public default void afterCancle() {};
     }
-
-
 }

@@ -147,9 +147,9 @@ public class JSFontChooserPanel extends JPanel {
     private void init(Font font) {
 
         //实例化变量
-        lblFont = new JLabel("字体：");
-        lblStyle = new JLabel("字型：");
-        lblSize = new JLabel("大小：");
+        lblFont = new JLabel("字体:");
+        lblStyle = new JLabel("字型:");
+        lblSize = new JLabel("大小:");
         txtFont = new JTextField(DEFAULT_FONT_NAME);
         txtStyle = new JTextField(FONT_STYLE_NAMES.get(DEFAULT_FONT_STYLE));
         txtSize = new JTextField(DEFAULT_FONT_SIZE);
