@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6535a136-aac5-4ca9-a3d0-05e4ab900d55" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/editor/JSTableButtonEditor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/editor/JSTableComboboxEditor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/editor/JSTableDateSpinnerEditor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/editor/JSTableDialogEditor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/editor/JSTableEmptyEditor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/editor/JSTableFormatTextEditor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/editor/JSTableSingleSelectionDialog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/suntoon/swing/ActionsDockable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/suntoon/swing/IconDockPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/suntoon/swing/JFrameDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/suntoon/swing/NotFloatingDockPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/suntoon/swing/SimpleDockPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/map/JMapFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/map/Programme.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suntoon/swing/JSComboBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/swing/JSComboBox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/suntoon/swing/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/suntoon/swing/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,31 +34,31 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="4" />
-          <entry key="java" value="159" />
+          <entry key="java" value="176" />
           <entry key="png" value="5" />
-          <entry key="xml" value="2" />
+          <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="4" />
           <entry key="Image" value="5" />
-          <entry key="JAVA" value="159" />
-          <entry key="XML" value="2" />
+          <entry key="JAVA" value="176" />
+          <entry key="XML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="2" />
-          <entry key="java" value="69067" />
-          <entry key="xml" value="134" />
+          <entry key="java" value="69659" />
+          <entry key="xml" value="164" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="69067" />
+          <entry key="JAVA" value="69659" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="XML" value="134" />
+          <entry key="XML" value="164" />
         </counts>
       </usages-collector>
     </session>
@@ -77,62 +66,23 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/editor/JSTableDateSpinnerEditor.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/suntoon/map/Programme.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/editor/JSTableDialogEditor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/editor/JSTableEmptyEditor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2280">
-              <caret line="132" column="19" lean-forward="true" selection-start-line="132" selection-start-column="19" selection-end-line="132" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="285">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/editor/JSTableFormatTextEditor.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/suntoon/map/JMapFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="33" column="15" lean-forward="true" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
+            <state relative-caret-position="481">
+              <caret line="31" column="46" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/editor/JSTableSingleSelectionDialog.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="335" lean-forward="true" selection-start-line="335" selection-end-line="335" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#6754#7165#0" expanded="true" />
-                <element signature="e#7164#7165#0" expanded="true" />
+                <element signature="e#1951#1952#0" expanded="true" />
+                <element signature="e#1999#2000#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -172,16 +122,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/renderer/JSTableButtonRenderer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/renderer/JSTableColorRenderer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/renderer/JSTableCheckboxRenderer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/renderer/JSTableDefaultCellRenderer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/renderer/JSTableEntityFieldButtonRenderer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/renderer/JSTableEntityFieldRenderer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/renderer/JSTableExpressionRenderer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/renderer/JSTableFormatRenderer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/renderer/JSTabelMapRenderer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/renderer/JSTableMapRenderer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/renderer/JSTableRadioButtionGroupRenderer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/renderer/JSTableRowNumberRenderer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/header/JSTableHeaderCheckboxRenderer.java" />
@@ -223,6 +163,16 @@
         <option value="$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/editor/JSTableSingleSelectionDialog.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/editor/JSTableEmptyEditor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/editor/JSTableFormatTextEditor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/editor/JSTableImageButtonEditor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/editor/JSTableMultySelectionDialog.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/editor/JSTableMultySelectDialogEditor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/editor/JSTablePopupTableEditor.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/suntoon/map/FirstExample.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/suntoon/map/SplitDockSample.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/suntoon/map/JSplitPaneTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/suntoon/map/Programme.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/suntoon/map/JMapFrame.java" />
       </list>
     </option>
   </component>
@@ -237,6 +187,11 @@
       <MavenGeneralSettings>
         <option name="userSettingsFile" value="D:\program\apache-maven-3.5.3\conf\settings.xml" />
       </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
     </option>
   </component>
   <component name="ProjectFrameBounds">
@@ -283,7 +238,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="swing" type="462c0819:PsiDirectoryNode" />
+              <item name="suntoon" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="desktop" type="b2602c69:ProjectViewProjectNode" />
@@ -291,27 +246,8 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="swing" type="462c0819:PsiDirectoryNode" />
-              <item name="resource" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="desktop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="desktop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="swing" type="462c0819:PsiDirectoryNode" />
-              <item name="table" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="desktop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="desktop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="swing" type="462c0819:PsiDirectoryNode" />
-              <item name="table" type="462c0819:PsiDirectoryNode" />
-              <item name="editor" type="462c0819:PsiDirectoryNode" />
+              <item name="suntoon" type="462c0819:PsiDirectoryNode" />
+              <item name="map" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -323,7 +259,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="E:/SoftwareBackup/android/full/adt-bundle-windows-x86-20140702/sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556176003707" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556189890906" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../DockFX" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -333,6 +269,9 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\workspace\IntelliJ\desktop\src\main\java\com\suntoon\map" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.suntoon.swing" />
     </key>
@@ -353,7 +292,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ActionsDockable">
+  <component name="RunManager" selected="Application.JMapFrame">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -374,13 +313,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IconDockPanel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.suntoon.swing.IconDockPanel" />
+    <configuration name="FirstExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.suntoon.map.FirstExample" />
       <module name="desktop" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.suntoon.swing.*" />
+          <option name="PATTERN" value="com.suntoon.map.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -388,13 +327,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JFrameDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.suntoon.swing.JFrameDemo" />
+    <configuration name="JMapFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.suntoon.map.JMapFrame" />
       <module name="desktop" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.suntoon.swing.*" />
+          <option name="PATTERN" value="com.suntoon.map.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -402,13 +341,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NotFloatingDockPanel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.suntoon.swing.NotFloatingDockPanel" />
+    <configuration name="JSplitPaneTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.suntoon.map.JSplitPaneTest" />
       <module name="desktop" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.suntoon.swing.*" />
+          <option name="PATTERN" value="com.suntoon.map.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -416,13 +355,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SimpleDockPanel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.suntoon.swing.SimpleDockPanel" />
+    <configuration name="SplitDockSample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.suntoon.map.SplitDockSample" />
       <module name="desktop" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.suntoon.swing.*" />
+          <option name="PATTERN" value="com.suntoon.map.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -460,19 +399,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.JFrameDemo" />
-      <item itemvalue="Application.SimpleDockPanel" />
-      <item itemvalue="Application.NotFloatingDockPanel" />
-      <item itemvalue="Application.IconDockPanel" />
       <item itemvalue="Application.ActionsDockable" />
+      <item itemvalue="Application.JMapFrame" />
+      <item itemvalue="Application.FirstExample" />
+      <item itemvalue="Application.SplitDockSample" />
+      <item itemvalue="Application.JSplitPaneTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.JMapFrame" />
+        <item itemvalue="Application.JSplitPaneTest" />
+        <item itemvalue="Application.SplitDockSample" />
+        <item itemvalue="Application.FirstExample" />
         <item itemvalue="Application.ActionsDockable" />
-        <item itemvalue="Application.IconDockPanel" />
-        <item itemvalue="Application.NotFloatingDockPanel" />
-        <item itemvalue="Application.SimpleDockPanel" />
-        <item itemvalue="Application.JFrameDemo" />
       </list>
     </recent_temporary>
   </component>
@@ -491,18 +430,18 @@
       <workItem from="1555895708409" duration="34409000" />
       <workItem from="1556019033351" duration="608000" />
       <workItem from="1556072416797" duration="13298000" />
-      <workItem from="1556153801308" duration="13022000" />
+      <workItem from="1556153801308" duration="23849000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140481000" />
+    <option name="totallyTimeSpent" value="151308000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="960" y="0" width="960" height="1040" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.44111112" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.3122222" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -511,7 +450,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.041950114" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.017006803" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.25612473" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -623,109 +562,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/view/JSTableColumnMapping.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="42" column="25" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/view/JSTableColumnMappingAbstract.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/suntoon/swing/utils/ClassUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="16" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/suntoon/swing/utils/StringUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="210" column="5" lean-forward="true" selection-start-line="210" selection-start-column="5" selection-end-line="210" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/swinglabs/swingx/swingx-all/1.6.5-1/swingx-all-1.6.5-1.jar!/org/jdesktop/swingx/table/TableColumnExt.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1830">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/swinglabs/swingx/swingx-all/1.6.5-1/swingx-all-1.6.5-1-sources.jar!/org/jdesktop/swingx/table/TableColumnExt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="107" column="13" selection-start-line="107" selection-start-column="13" selection-end-line="107" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/JSTableColumn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="14" column="40" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/editor/JSTableCheckboxEditor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/editor/JSTableRadioButtonGroupEditor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2736">
-          <caret line="169" column="53" selection-start-line="169" selection-start-column="53" selection-end-line="169" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2348#2349#0" expanded="true" />
-            <element signature="e#2400#2401#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/editor/JSTableSpinnerEditor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2418#2419#0" expanded="true" />
-            <element signature="e#2475#2476#0" expanded="true" />
-            <element signature="e#2529#2530#0" expanded="true" />
-            <element signature="e#2578#2579#0" expanded="true" />
-            <element signature="e#2631#2632#0" expanded="true" />
-            <element signature="e#2675#2676#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/editor/JSEditorDelegateAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1293#1294#0" expanded="true" />
-            <element signature="e#1322#1323#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/suntoon/swing/DeptEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/target/classes/com/suntoon/swing/resource/ResourceLoader.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-181">
@@ -967,34 +803,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/suntoon/swing/IconDockPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="82" column="31" lean-forward="true" selection-start-line="82" selection-start-column="31" selection-end-line="82" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3649#3650#0" expanded="true" />
-            <element signature="e#3699#3700#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/Program Files/Java/jdk1.8.0_121/src.zip!/java/awt/Dimension.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
           <caret line="53" column="13" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/suntoon/swing/ActionsDockable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="115" column="9" lean-forward="true" selection-start-line="115" selection-start-column="9" selection-end-line="115" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5022#5023#0" expanded="true" />
-            <element signature="e#5072#5073#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1074,10 +886,144 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/editor/JSTableFormatTextEditor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="33" column="15" lean-forward="true" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
+        <state relative-caret-position="570">
+          <caret line="34" column="6" lean-forward="true" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/editor/JSTableImageButtonEditor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2622">
+          <caret line="150" column="5" selection-start-line="150" selection-start-column="5" selection-end-line="150" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/editor/JSTableMultySelectionDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="664">
+          <caret line="352" column="66" selection-start-line="352" selection-start-column="66" selection-end-line="352" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5032#5443#0" expanded="true" />
+            <element signature="e#5442#5443#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/editor/JSTableMultySelectDialogEditor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6479">
+          <caret line="371" column="23" selection-start-line="371" selection-start-column="23" selection-end-line="371" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/editor/JSTablePopupTableEditor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1235">
+          <caret line="71" column="5" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/suntoon/swing/IconDockPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="84" column="28" selection-start-line="84" selection-start-column="28" selection-end-line="84" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/suntoon/swing/ActionsDockable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="107" column="9" selection-start-line="107" selection-start-column="9" selection-end-line="107" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_121/src.zip!/java/awt/BorderLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="365" column="5" selection-start-line="365" selection-start-column="5" selection-end-line="365" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="62" column="26" selection-start-line="62" selection-start-column="26" selection-end-line="62" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/suntoon/map/FirstExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="74" column="77" lean-forward="true" selection-start-line="74" selection-start-column="77" selection-end-line="74" selection-end-column="77" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5795#5796#0" expanded="true" />
+            <element signature="e#5845#5846#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/suntoon/map/SplitDockSample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="100" column="79" lean-forward="true" selection-start-line="100" selection-start-column="79" selection-end-line="100" selection-end-column="79" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_121/src.zip!/javax/swing/JSplitPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="335" column="22" lean-forward="true" selection-start-line="335" selection-start-column="22" selection-end-line="335" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/suntoon/map/JSplitPaneTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="931">
+          <caret line="49" column="33" lean-forward="true" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/suntoon/map/Programme.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/suntoon/map/JMapFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="31" column="46" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1951#1952#0" expanded="true" />
+            <element signature="e#1999#2000#0" expanded="true" />
           </folding>
         </state>
       </provider>
