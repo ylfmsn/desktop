@@ -73,4 +73,14 @@ public class JSComboBox<T, V> extends JComboBox<T> {
 
         return values.get(this.getSelectedIndex());
     }
+
+    /**
+     * 设置选择值
+     * @param v 要选择的值
+     */
+    public void setSelectedValue(V v)
+    {
+        int index = this.values.indexOf(v);
+        this.setSelectedIndex(index);
+    }
 }

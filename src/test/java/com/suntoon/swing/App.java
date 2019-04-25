@@ -26,6 +26,9 @@ public class App {
         frm.setLocationRelativeTo(null);   //在屏幕上居中
         frm.setVisible(true);
 
+        /*JFrameDemo frame = new JFrameDemo();
+        frame.*/
+
 
 
 
