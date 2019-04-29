@@ -2,70 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6535a136-aac5-4ca9-a3d0-05e4ab900d55" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/map/MapListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/map/MapPane.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/map/action/AbstractMapAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/map/action/DistanceAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/map/action/MapAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/map/action/OpenShpLayerAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/map/action/PanAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/map/action/ResetAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/map/action/ZoomInAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/map/action/ZoomOutAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/map/control/JMapToolBar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/map/event/MapMouseAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/map/event/MapMouseEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/map/event/MapMouseEventDispatcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/map/event/MapMouseListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/map/event/MapPaintListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/map/event/MapPaneEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/map/event/MapPaneListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/map/plugins/Plugin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/map/tools/AbstractZoomTool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/map/tools/CursorTool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/map/tools/DistanceTool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/map/tools/DragBoxMapPaintListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/map/tools/PanTool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/map/tools/ZoomInTool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/map/tools/ZoomOutTool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/map/busy_16.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/map/checked.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/map/cross.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/map/cross32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/map/distance.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/map/down.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/map/eye_closed.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/map/eye_closed32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/map/eye_open.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/map/eye_open32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/map/feature.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/map/grid.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/map/info_mode.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/map/info_source.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/map/mActionIdentify.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/map/mActionPan.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/map/mActionZoomFullExtent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/map/mActionZoomIn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/map/mActionZoomOut.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/map/mOpenLayer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/map/open.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/map/pan_mode.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/map/pointer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/map/remove_layer.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/map/remove_layer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/map/remove_layer32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/map/style.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/map/style_layer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/map/style_layer32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/map/tick.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/map/tick32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/map/unchecked.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/map/up.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/map/zoom_extent_co.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/map/zoom_in_co.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/map/zoom_out_co.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suntoon/map/JMapFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/map/JMapFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -95,6 +32,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="4" />
+          <entry key="gitignore" value="1" />
           <entry key="java" value="208" />
           <entry key="png" value="5" />
           <entry key="xml" value="4" />
@@ -105,19 +43,20 @@
           <entry key="CLASS" value="4" />
           <entry key="Image" value="5" />
           <entry key="JAVA" value="208" />
+          <entry key="PLAIN_TEXT" value="1" />
           <entry key="XML" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="2" />
-          <entry key="java" value="77747" />
+          <entry key="java" value="77759" />
           <entry key="xml" value="166" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="77747" />
+          <entry key="JAVA" value="77759" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="XML" value="166" />
         </counts>
@@ -129,28 +68,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/suntoon/map/control/JMapToolBar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="598">
-              <caret line="88" column="51" selection-start-line="88" selection-start-column="33" selection-end-line="88" selection-end-column="51" />
+            <state relative-caret-position="285">
+              <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#656#657#0" expanded="true" />
                 <element signature="e#683#684#0" expanded="true" />
                 <element signature="e#747#748#0" expanded="true" />
                 <element signature="e#783#784#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/suntoon/map/action/OpenShpLayerAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1520">
-              <caret line="80" column="9" selection-start-line="80" selection-start-column="9" selection-end-line="80" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1328#1329#0" expanded="true" />
-                <element signature="e#1368#1369#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -244,13 +169,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/suntoon/map/event/MapMouseEvent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2660">
-              <caret line="146" column="13" selection-start-line="146" selection-start-column="13" selection-end-line="146" selection-end-column="13" />
+            <state relative-caret-position="204">
+              <caret line="144" column="42" lean-forward="true" selection-start-line="144" selection-start-column="42" selection-end-line="144" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1746#1747#0" expanded="true" />
                 <element signature="e#1796#1797#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -289,7 +223,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/com/suntoon/swing/JFrameDemo.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/suntoon/swing/SimpleDockPanel.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/suntoon/swing/NotFloatingDockable.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/suntoon/swing/NotFloatingDockPanel.java" />
@@ -337,9 +270,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/suntoon/map/tools/PanTool.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/suntoon/map/tools/DistanceTool.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/suntoon/map/action/DistanceAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/suntoon/map/control/JMapToolBar.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/suntoon/map/MapPane.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/suntoon/map/action/OpenShpLayerAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/suntoon/map/control/JMapToolBar.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -421,26 +355,6 @@
               <item name="desktop" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="suntoon" type="462c0819:PsiDirectoryNode" />
-              <item name="map" type="462c0819:PsiDirectoryNode" />
-              <item name="action" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="desktop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="desktop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="suntoon" type="462c0819:PsiDirectoryNode" />
-              <item name="map" type="462c0819:PsiDirectoryNode" />
-              <item name="tools" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="desktop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="desktop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -453,7 +367,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="E:/SoftwareBackup/android/full/adt-bundle-windows-x86-20140702/sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556534495885" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556535239972" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../DockFX" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -627,16 +541,15 @@
       <workItem from="1556019033351" duration="608000" />
       <workItem from="1556072416797" duration="13298000" />
       <workItem from="1556153801308" duration="24457000" />
-      <workItem from="1556498951779" duration="18571000" />
+      <workItem from="1556498951779" duration="19093000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="170487000" />
+    <option name="totallyTimeSpent" value="171009000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="960" y="0" width="960" height="1040" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.46444446" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -653,7 +566,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3344671" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3344671" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.3295583" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32993197" />
@@ -759,13 +672,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/suntoon/swing/table/editor/JSTableButtonEditor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/suntoon/swing/JSComboBox.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="605">
@@ -1066,18 +972,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/suntoon/map/event/MapMouseEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2660">
-          <caret line="146" column="13" selection-start-line="146" selection-start-column="13" selection-end-line="146" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1746#1747#0" expanded="true" />
-            <element signature="e#1796#1797#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/suntoon/map/tools/ZoomOutTool.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-442">
@@ -1152,20 +1046,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/suntoon/map/control/JMapToolBar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="88" column="51" selection-start-line="88" selection-start-column="33" selection-end-line="88" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#656#657#0" expanded="true" />
-            <element signature="e#683#684#0" expanded="true" />
-            <element signature="e#747#748#0" expanded="true" />
-            <element signature="e#783#784#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/suntoon/map/MapPane.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="313">
@@ -1185,6 +1065,39 @@
             <element signature="e#1328#1329#0" expanded="true" />
             <element signature="e#1368#1369#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/suntoon/map/control/JMapToolBar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#656#657#0" expanded="true" />
+            <element signature="e#683#684#0" expanded="true" />
+            <element signature="e#747#748#0" expanded="true" />
+            <element signature="e#783#784#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/suntoon/map/event/MapMouseEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="144" column="42" lean-forward="true" selection-start-line="144" selection-start-column="42" selection-end-line="144" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1746#1747#0" expanded="true" />
+            <element signature="e#1796#1797#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
         </state>
       </provider>
     </entry>
