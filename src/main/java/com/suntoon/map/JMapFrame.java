@@ -1,5 +1,7 @@
 package com.suntoon.map;
 
+import org.jb2011.lnf.beautyeye.BeautyEyeLNFHelper;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -14,6 +16,9 @@ import java.awt.*;
 public class JMapFrame extends JFrame {
 
     private static final long serialVersionUID = 682799622168380767L;
+
+    //地图工具条
+    //private JMapToolBar;
 
     public JMapFrame(){
         super();
@@ -63,7 +68,19 @@ public class JMapFrame extends JFrame {
         panel4.add(label4, BorderLayout.CENTER);
         this.add(panel4,BorderLayout.SOUTH);
     }
+
+
     public static void main(String args[]){
+
+        try{
+            //设置本属性将改变窗口边框样式定义
+            //BeautyEyeLNFHelper.frameBorderStyle = BeautyEyeLNFHelper.FrameBorderStyle.osLookAndFeelDecorated;
+            BeautyEyeLNFHelper.frameBorderStyle = BeautyEyeLNFHelper.FrameBorderStyle.translucencyAppleLike;
+            org.jb2011.lnf.beautyeye.BeautyEyeLNFHelper.launchBeautyEyeLNF();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         JMapFrame test = new JMapFrame();
     }
 }
