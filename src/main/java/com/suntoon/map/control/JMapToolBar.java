@@ -53,6 +53,8 @@ public class JMapToolBar extends JToolBar implements MapListener {
     //shape文件操作对象
     private JButton btnShp;
 
+    private JButton btnRaster;
+
     //测距工具
     private JButton btnDistance;
 
@@ -88,5 +90,8 @@ public class JMapToolBar extends JToolBar implements MapListener {
         //以下是和数据操作相关的功能点
         btnShp = new JButton(new OpenShpLayerAction(this.canvas));
         this.add(btnShp);
+
+        btnRaster = new JButton(new OpenRasterLayerAction(this.canvas));
+        this.add(btnRaster);
     }
 }

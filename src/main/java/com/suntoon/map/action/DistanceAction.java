@@ -21,7 +21,7 @@ public class DistanceAction extends AbstractMapAction {
     //测距操作
     public DistanceAction(MapPane mapPane) {
         super(mapPane);
-        this.putValue(SMALL_ICON, new ImageIcon(this.getClass().getResource("map/distance.png")));
+        this.putValue(SMALL_ICON, new ImageIcon(this.getClass().getResource("/map/distance.png")));
         this.putValue(NAME, "");
         this.putValue(SHORT_DESCRIPTION, "测距");
     }

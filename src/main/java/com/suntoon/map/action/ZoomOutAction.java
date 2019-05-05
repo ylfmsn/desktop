@@ -21,7 +21,7 @@ public class ZoomOutAction extends AbstractMapAction {
     //缩小操作 构造器
     public ZoomOutAction(MapPane mapPane) {
         super(mapPane);
-        this.putValue(SMALL_ICON, new ImageIcon(this.getClass().getResource("map/mActionZoomOut.png")));
+        this.putValue(SMALL_ICON, new ImageIcon(this.getClass().getResource("/map/mActionZoomOut.png")));
         this.putValue(NAME, "");
         this.putValue(SHORT_DESCRIPTION, "缩小");
     }

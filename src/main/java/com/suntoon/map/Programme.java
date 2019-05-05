@@ -1,6 +1,6 @@
 package com.suntoon.map;
 
-import javax.swing.*;
+import org.jb2011.lnf.beautyeye.BeautyEyeLNFHelper;
 
 /**
  * @ProjectionName desktop
@@ -14,10 +14,12 @@ public class Programme {
 
     public static void main(String[] args) {
 
-        try {
-            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException
-                | UnsupportedLookAndFeelException e) {
+        try{
+            //设置本属性将改变窗口边框样式定义
+            //BeautyEyeLNFHelper.frameBorderStyle = BeautyEyeLNFHelper.FrameBorderStyle.osLookAndFeelDecorated;
+            BeautyEyeLNFHelper.frameBorderStyle = BeautyEyeLNFHelper.FrameBorderStyle.translucencyAppleLike;
+            org.jb2011.lnf.beautyeye.BeautyEyeLNFHelper.launchBeautyEyeLNF();
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

@@ -21,7 +21,7 @@ public class ZoomInAction extends AbstractMapAction  {
     //放大操作
     public ZoomInAction(MapPane mapPane) {
         super(mapPane);
-        this.putValue(SMALL_ICON, new ImageIcon(this.getClass().getResource("map/mActionZoomIn.png")));
+        this.putValue(SMALL_ICON, new ImageIcon(this.getClass().getResource("/map/mActionZoomIn.png")));
         this.putValue(NAME, "");
         this.putValue(SHORT_DESCRIPTION, "放大");
     }

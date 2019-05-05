@@ -1,6 +1,8 @@
 package com.suntoon.map;
 
 import com.suntoon.map.control.JMapToolBar;
+import com.suntoon.map.plugins.ScalebarPlugin;
+import org.geotools.map.MapContent;
 import org.jb2011.lnf.beautyeye.BeautyEyeLNFHelper;
 
 import javax.swing.*;
@@ -30,13 +32,16 @@ public class JMapFrame extends JFrame {
         this.setBounds(100, 100, 1224, 840);
         this.setTitle("suntoon desktoop v1.0");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setVisible(true);
         this.setExtendedState(JFrame.MAXIMIZED_BOTH); // 默认窗口最大化
         this.initCompents();
     }
 
     private void initCompents(){
+
         this.setLayout(new BorderLayout());
+        canvas = new JMapCanvas(new MapContent());
+        toolBar = new JMapToolBar(canvas);
+        canvas.addPlugin(new ScalebarPlugin("标尺", ScalebarPlugin.GROUP_LAYER, canvas));
 
         JPanel panel = new JPanel(new BorderLayout());
         panel.setPreferredSize(new Dimension(1024, 100));
@@ -61,12 +66,12 @@ public class JMapFrame extends JFrame {
 
         JPanel panel3 = new JPanel(new BorderLayout());
         panel3.setBorder(BorderFactory.createLineBorder(Color.lightGray));
-        JLabel label3 = new JLabel("map", JLabel.CENTER);
-        panel3.add(label3, BorderLayout.CENTER);
-        this.add(panel3,BorderLayout.CENTER);
+        panel3.add(toolBar, BorderLayout.NORTH);
+        panel3.add(canvas, BorderLayout.CENTER);
+        this.add(panel3, BorderLayout.CENTER);
 
         JPanel panel4 = new JPanel(new BorderLayout());
-        panel2.setPreferredSize(new Dimension(200, 40));
+        panel4.setPreferredSize(new Dimension(200, 40));
         panel4.setBorder(BorderFactory.createLineBorder(Color.lightGray));
         JLabel label4 = new JLabel("map", JLabel.CENTER);
         panel4.add(label4, BorderLayout.CENTER);

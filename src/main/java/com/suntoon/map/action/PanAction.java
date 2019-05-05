@@ -21,7 +21,7 @@ public class PanAction extends AbstractMapAction {
     //移动操作
     public PanAction(MapPane mapPane) {
         super(mapPane);
-        this.putValue(SMALL_ICON, new ImageIcon(this.getClass().getResource("map/pan_mode.gif")));
+        this.putValue(SMALL_ICON, new ImageIcon(this.getClass().getResource("/map/pan_mode.gif")));
         this.putValue(NAME, "");
         this.putValue(SHORT_DESCRIPTION, "拖动");
     }

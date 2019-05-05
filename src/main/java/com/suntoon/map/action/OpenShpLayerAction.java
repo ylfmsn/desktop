@@ -31,7 +31,7 @@ public class OpenShpLayerAction extends AbstractMapAction {
     //导入操作
     public OpenShpLayerAction(MapPane mapPane) {
         super(mapPane);
-        this.putValue(SMALL_ICON, new ImageIcon(this.getClass().getResource("map/mOpenLayer.png")));
+        this.putValue(SMALL_ICON, new ImageIcon(this.getClass().getResource("/map/mOpenLayer.png")));
         this.putValue(NAME, "");
         this.putValue(SHORT_DESCRIPTION, "导入shp文件");
     }

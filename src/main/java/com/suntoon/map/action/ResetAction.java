@@ -19,7 +19,7 @@ public class ResetAction extends AbstractMapAction {
 
     public ResetAction(MapPane mapPane) {
         super(mapPane);
-        this.putValue(SMALL_ICON, new ImageIcon(this.getClass().getResource("map/mActionZoomFullExtent.png")));
+        this.putValue(SMALL_ICON, new ImageIcon(this.getClass().getResource("/map/mActionZoomFullExtent.png")));
         this.putValue(NAME, "");
         this.putValue(SHORT_DESCRIPTION, "重置");
     }
