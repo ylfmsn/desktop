@@ -1,5 +1,6 @@
 package com.suntoon.map;
 
+import com.suntoon.map.control.JMapToolBar;
 import org.jb2011.lnf.beautyeye.BeautyEyeLNFHelper;
 
 import javax.swing.*;
@@ -18,7 +19,10 @@ public class JMapFrame extends JFrame {
     private static final long serialVersionUID = 682799622168380767L;
 
     //地图工具条
-    //private JMapToolBar;
+    private JMapToolBar toolBar;
+
+    //地图对象
+    private JMapCanvas canvas;
 
     public JMapFrame(){
         super();
