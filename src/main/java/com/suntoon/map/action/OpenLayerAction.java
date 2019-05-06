@@ -6,95 +6,118 @@ import org.geotools.coverage.grid.GridCoverage2D;
 import org.geotools.coverage.grid.io.AbstractGridFormat;
 import org.geotools.coverage.grid.io.GridCoverage2DReader;
 import org.geotools.coverage.grid.io.GridFormatFinder;
+import org.geotools.data.FileDataStore;
+import org.geotools.data.FileDataStoreFinder;
+import org.geotools.data.Parameter;
+import org.geotools.data.simple.SimpleFeatureSource;
 import org.geotools.factory.CommonFactoryFinder;
 import org.geotools.factory.Hints;
 import org.geotools.gce.geotiff.GeoTiffFormat;
+import org.geotools.map.FeatureLayer;
 import org.geotools.map.GridReaderLayer;
 import org.geotools.map.Layer;
 import org.geotools.styling.*;
+import org.geotools.swing.JMapFrame;
+import org.geotools.swing.data.JParameterListWizard;
+import org.geotools.swing.wizard.JWizard;
+import org.geotools.util.KVP;
 import org.opengis.filter.FilterFactory2;
 import org.opengis.style.ContrastMethod;
 
 import javax.swing.*;
-import javax.swing.filechooser.FileFilter;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 /**
  * @ProjectionName desktop
- * @ClassName OpenRasterLayerAction
- * @Description 导入raster文件的操作
+ * @ClassName OpenShpLayerAction
+ * @Description 导入shp文件的操作
  * @Author YueLifeng
- * @Date 2019/5/5 0005下午 5:12
+ * @Date 2019/4/29 0029下午 5:09
  * @Version 1.0
  */
-public class OpenRasterLayerAction extends AbstractMapAction {
+public class OpenLayerAction extends AbstractMapAction {
 
     private static final long serialVersionUID = 1L;
-
-    private GridCoverage2DReader reader;
 
     private StyleFactory sf = CommonFactoryFinder.getStyleFactory();
     private FilterFactory2 ff = CommonFactoryFinder.getFilterFactory2();
 
-    /**
-     * @Author YueLifeng
-     * @Description //导入操作
-     * @Date 下午 5:21 2019/5/5 0005
-     * @param mapPane
-     * @return
-     */
-    public OpenRasterLayerAction(MapPane mapPane) {
+    private JMapFrame frame;
+    private GridCoverage2DReader reader;
+
+    //导入操作
+    public OpenLayerAction(MapPane mapPane) {
         super(mapPane);
         this.putValue(SMALL_ICON, new ImageIcon(this.getClass().getResource("/map/mOpenLayer.png")));
         this.putValue(NAME, "");
-        this.putValue(SHORT_DESCRIPTION, "导入栅格文件");
+        this.putValue(SHORT_DESCRIPTION, "导入GIS数据");
     }
+
+    //生成随机颜色的种子
+    private static Random rd = new Random();
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        final JFileChooser fileChooser = new JFileChooser();
-        fileChooser.setFileFilter(new FileFilter() {
+        List<Parameter<?>> list = new ArrayList<>();
+        list.add(new Parameter<>("image", File.class, "Image",
+                "GeoTiff or World+Image to display as basemap",
+                new KVP(Parameter.EXT, "tif", Parameter.EXT, "jpg")));
+        list.add(new Parameter<>("shape", File.class, "Shapefile", "Shapefile contents to display",
+                new KVP(Parameter.EXT, "shp")));
 
-            @Override
-            public String getDescription() {
-                return "raster";
-            }
+        JParameterListWizard wizard = new JParameterListWizard("Image Lab",
+                "Fill in the following layers", list);
+        int finish = wizard.showModalDialog();
 
-            @Override
-            public boolean accept(File f) {
-                if (f.isDirectory() || (f.isFile() && f.getName().endsWith(".tif")))
-                    return true;
-
-                return false;
-            }
-        });
-        if (fileChooser.showOpenDialog(null) != JFileChooser.APPROVE_OPTION)
-            return;
-
-        File file = fileChooser.getSelectedFile();
-
-        if (file == null) {
-            return;
+        if (finish != JWizard.FINISH) {
+            System.exit(0);
         }
-
+        File imageFile = (File) wizard.getConnectionParameters().get("image");
+        File shapeFile = (File) wizard.getConnectionParameters().get("shape");
         try {
-            AbstractGridFormat format = GridFormatFinder.findFormat(file);
-            //this is a bit hacky but does make more geotiffs work
-            Hints hints = new Hints();
-            if (format instanceof GeoTiffFormat) {
-                hints = new Hints(Hints.FORCE_LONGITUDE_FIRST_AXIS_ORDER, Boolean.TRUE);
-            }
-            reader = format.getReader(file, hints);
-
-            Style rasterStyle = createRGBStyle();
-            Layer layer = new GridReaderLayer(reader, rasterStyle);
-            this.getMapPane().getMapContent().addLayer(layer);
-            this.getMapPane().repaint(false);
-        } catch (Exception ex) {
-            ex.printStackTrace();
+            displayLayers(imageFile, shapeFile);
+        } catch (IOException e1) {
+            e1.printStackTrace();
         }
+    }
+
+    private void displayLayers(File rasterFile, File shpFile) throws IOException {
+        AbstractGridFormat format = GridFormatFinder.findFormat( rasterFile );
+        //this is a bit hacky but does make more geotiffs work
+        Hints hints = new Hints();
+        if (format instanceof GeoTiffFormat) {
+            hints = new Hints(Hints.FORCE_LONGITUDE_FIRST_AXIS_ORDER, Boolean.TRUE);
+        }
+        reader = format.getReader(rasterFile, hints);
+
+
+        // Initially display the raster in greyscale using the
+        // data from the first image band
+        Style rasterStyle = createRGBStyle();
+
+        // Connect to the shapefile
+        FileDataStore dataStore = FileDataStoreFinder.getDataStore(shpFile);
+        SimpleFeatureSource shapefileSource = dataStore.getFeatureSource();
+
+        // Create a basic style with yellow lines and no fill
+        Style shpStyle = SLD.createPolygonStyle(Color.YELLOW, null, 0.0f);
+
+        // Set up a MapContent with the two layers
+        //final MapContent map = new MapContent();
+        //this.getMapPane().getMapContent().setTitle("ImageLab");
+
+        Layer rasterLayer = new GridReaderLayer(reader, rasterStyle);
+        this.getMapPane().getMapContent().addLayer(rasterLayer);
+
+        Layer shpLayer = new FeatureLayer(shapefileSource, shpStyle);
+        this.getMapPane().getMapContent().addLayer(shpLayer);
+        this.getMapPane().repaint(false);
     }
 
     private Style createRGBStyle() {

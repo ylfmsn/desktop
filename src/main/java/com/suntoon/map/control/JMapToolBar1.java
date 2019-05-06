@@ -14,12 +14,12 @@ import javax.swing.*;
  * @Date 2019/4/29 0029上午 10:23
  * @Version 1.0
  */
-public class JMapToolBar extends JToolBar implements MapListener {
+public class JMapToolBar1 extends JToolBar implements MapListener {
 
     private static final long serialVersionUID = 366621552595015884L;
 
     //地图工具类 构造器
-    public JMapToolBar(MapPane mapPane) {
+    public JMapToolBar1(MapPane mapPane) {
         super();
         this.setMapPane(mapPane);
         this.initComponents();
@@ -88,10 +88,10 @@ public class JMapToolBar extends JToolBar implements MapListener {
         this.addSeparator();
 
         //以下是和数据操作相关的功能点
-        /*btnShp = new JButton(new OpenShpLayerAction(this.canvas));
-        this.add(btnShp);*/
+        btnShp = new JButton(new OpenShpLayerAction(this.canvas));
+        this.add(btnShp);
 
-        btnRaster = new JButton(new OpenLayerAction(this.canvas));
+        btnRaster = new JButton(new OpenRasterLayerAction(this.canvas));
         this.add(btnRaster);
     }
 }
