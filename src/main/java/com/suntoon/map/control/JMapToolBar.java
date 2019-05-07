@@ -91,7 +91,7 @@ public class JMapToolBar extends JToolBar implements MapListener {
         /*btnShp = new JButton(new OpenShpLayerAction(this.canvas));
         this.add(btnShp);*/
 
-        btnRaster = new JButton(new OpenLayerAction(this.canvas));
-        this.add(btnRaster);
+        /*btnRaster = new JButton(new OpenLayerAction(this.canvas));
+        this.add(btnRaster);*/
     }
 }

@@ -391,14 +391,25 @@ public class TestMap extends JMapFrame {
             toolBar.add(btn);
         }
 
+        if (toolSet.contains(org.geotools.swing.JMapFrame.Tool.RESET)) {
+            btn = new JButton(new ResetAction(mapPane));
+            btn.setName("ToolbarResetButton");
+            toolBar.add(btn);
+        }
+
         //panel.add(toolBar, "grow");
-        MapContent mapContent = null;
+        MapContent mapContent = new MapContent();
         JMapStatusBar statusBar = null;
         try {
-            mapContent = displayLayers(rasterFile, shpFile);
-            mapPane.setMapContent(mapContent);
+
+
             //toolBar = new JMapToolBar(canvas);
             statusBar = JMapStatusBar.createDefaultStatusBar(mapPane);
+
+
+            //mapContent = displayLayers(rasterFile, shpFile);
+            mapPane.setMapContent(mapContent);
+
             panel3.add(toolBar, BorderLayout.NORTH);
             panel3.add(mapPane, BorderLayout.CENTER);
             //panel3.add(statusBar, BorderLayout.SOUTH);
