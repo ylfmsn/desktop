@@ -6,34 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6535a136-aac5-4ca9-a3d0-05e4ab900d55" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/checkboxtree/Demo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/checkboxtree/JCheckBoxTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/domaincheckboxtree/JCheckBoxTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/domaincheckboxtree/MyDomainCheckBoxTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/map/JLocalDataPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/map/localtree/CheckBoxTreeCellRenderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/map/localtree/CheckBoxTreeLabel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/map/localtree/CheckBoxTreeNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/map/localtree/CheckBoxTreeNodeSelectionListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/map/localtree/JMapScrollPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/map/localtree/JMapTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/test/AllFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/test/MySplitPane.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/test/TestSplitPane.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/test/TestTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/treedemo/CheckBoxTreeCellRenderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/treedemo/CheckBoxTreeLabel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/treedemo/CheckBoxTreeNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/treedemo/CheckBoxTreeNodeSelectionListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/treedemo/Demo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/map/mOpenLayer1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suntoon/map/JMapFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/map/JMapFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suntoon/map/JMapPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/map/JMapPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suntoon/map/action/OpenLayerAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/map/action/OpenLayerAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suntoon/test/TestDivide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suntoon/test/TestDivide.java" afterDir="false" />
-    </list>
+    <list default="true" id="6535a136-aac5-4ca9-a3d0-05e4ab900d55" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -120,8 +93,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/suntoon/map/JLocalDataPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="68" column="1" lean-forward="true" selection-start-line="68" selection-start-column="1" selection-end-line="68" selection-end-column="1" />
+            <state relative-caret-position="492">
+              <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#6474#6475#0" expanded="true" />
@@ -429,7 +402,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="E:/SoftwareBackup/android/full/adt-bundle-windows-x86-20140702/sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557742210578" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557742395590" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../geotoolsswing" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -613,12 +586,12 @@
       <workItem from="1557107047620" duration="42215000" />
       <workItem from="1557278642587" duration="24542000" />
       <workItem from="1557364854309" duration="36258000" />
-      <workItem from="1557708873759" duration="24893000" />
+      <workItem from="1557708873759" duration="25182000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="340612000" />
+    <option name="totallyTimeSpent" value="340901000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -631,7 +604,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22867803" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -642,13 +614,13 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.31514478" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.31514478" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.155902" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32993197" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.23496659" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.23496659" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.3295583" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.15924276" />
@@ -1302,8 +1274,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/suntoon/map/JLocalDataPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="68" column="1" lean-forward="true" selection-start-line="68" selection-start-column="1" selection-end-line="68" selection-end-column="1" />
+        <state relative-caret-position="492">
+          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#6474#6475#0" expanded="true" />
