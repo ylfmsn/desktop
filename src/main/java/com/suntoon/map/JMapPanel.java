@@ -1,8 +1,5 @@
 package com.suntoon.map;
 
-import com.suntoon.map.action.OpenLayerAction;
-import com.suntoon.map.action.PanAction1;
-import com.suntoon.map.action.ResetAction1;
 import org.geotools.coverage.GridSampleDimension;
 import org.geotools.coverage.grid.GridCoverage2D;
 import org.geotools.coverage.grid.io.AbstractGridFormat;
@@ -58,17 +55,81 @@ public class JMapPanel extends JMapPane{
     //地图面板
     private JMapPane mapPane;
 
+    private MapContent mapContent;
+
     private StyleFactory sf = CommonFactoryFinder.getStyleFactory();
     private FilterFactory2 ff = CommonFactoryFinder.getFilterFactory2();
     private GridCoverage2DReader reader;
-
-    private MapContent mapContent;
 
     public JMapPanel() {
         super();
         this.setLayout(new BorderLayout());
         this.setBorder(BorderFactory.createLineBorder(Color.lightGray));
         initCompenent();
+    }
+
+    private void initCompenent() {
+        Set<JMapFrame.Tool> toolSet = EnumSet.allOf(JMapFrame.Tool.class);
+        JButton btn;
+        ButtonGroup cursorToolGrp = new ButtonGroup();
+        mapPane = new JMapPane();
+        toolBar = new JToolBar();
+        mapContent = new MapContent();
+
+        if (toolSet.contains(JMapFrame.Tool.SCROLLWHEEL)) {
+            mapPane.addMouseListener(new ScrollWheelTool(mapPane));
+        }
+
+        if (toolSet.contains(JMapFrame.Tool.POINTER)) {
+            btn = new JButton(new NoToolAction(mapPane));
+            btn.setName("ToolbarPointerButton");
+            toolBar.add(btn);
+            cursorToolGrp.add(btn);
+        }
+
+        if (toolSet.contains(JMapFrame.Tool.ZOOM)) {
+            btn = new JButton(new ZoomInAction(mapPane));
+            btn.setName("ToolbarZoomInButton");
+            toolBar.add(btn);
+            cursorToolGrp.add(btn);
+
+            btn = new JButton(new ZoomOutAction(mapPane));
+            btn.setName("ToolbarZoomOutButton");
+            toolBar.add(btn);
+            cursorToolGrp.add(btn);
+
+            toolBar.addSeparator();
+        }
+
+        if (toolSet.contains(JMapFrame.Tool.PAN)) {
+            btn = new JButton(new PanAction(mapPane));
+            btn.setName("ToolbarPanButton");
+            toolBar.add(btn);
+            cursorToolGrp.add(btn);
+
+            //toolBar.addSeparator();
+        }
+
+        if (toolSet.contains(org.geotools.swing.JMapFrame.Tool.INFO)) {
+            btn = new JButton(new InfoAction(mapPane));
+            btn.setName("ToolbarInfoButton");
+            toolBar.add(btn);
+
+            toolBar.addSeparator();
+        }
+
+        if (toolSet.contains(org.geotools.swing.JMapFrame.Tool.RESET)) {
+            btn = new JButton(new ResetAction(mapPane));
+            btn.setName("ToolbarResetButton");
+            toolBar.add(btn);
+        }
+
+        mapPane.setMapContent(mapContent);
+
+        statusBar = JMapStatusBar.createDefaultStatusBar(mapPane);
+        this.add(toolBar, BorderLayout.NORTH);
+        this.add(mapPane, BorderLayout.CENTER);
+        this.add(statusBar, BorderLayout.SOUTH);
     }
 
     public Layer displayShpLayers(File shpFile) throws IOException {
@@ -79,7 +140,7 @@ public class JMapPanel extends JMapPane{
         //Style shpStyle = SLD.createPolygonStyle(Color.BLUE, null, 0.0f);
         Style shpStyle = SLD.createSimpleStyle(shapefileSource.getSchema(), new Color(rd.nextInt(255), rd.nextInt(255), rd.nextInt(255)));
         Layer shpLayer = new FeatureLayer(shapefileSource, shpStyle);
-        shpLayer.setTitle("shp");
+        System.out.println(shpLayer.getUserData());
         return shpLayer;
     }
 
@@ -97,75 +158,6 @@ public class JMapPanel extends JMapPane{
         Layer rasterLayer = new GridReaderLayer(reader, rasterStyle);
         rasterLayer.setTitle("raster");
         return rasterLayer;
-    }
-
-    private void initCompenent() {
-        Set<JMapFrame.Tool> toolSet = EnumSet.allOf(JMapFrame.Tool.class);
-        JButton btn;
-        ButtonGroup cursorToolGrp = new ButtonGroup();
-        mapPane = new JMapPane();
-        toolBar = new JToolBar();
-        mapContent = new MapContent();
-
-        if (toolSet.contains(JMapFrame.Tool.SCROLLWHEEL)) {
-            mapPane.addMouseListener(new ScrollWheelTool(mapPane));
-        }
-
-        if (toolSet.contains(org.geotools.swing.JMapFrame.Tool.POINTER)) {
-            btn = new JButton(new NoToolAction(mapPane));
-            btn.setName("ToolbarPointerButton");
-            toolBar.add(btn);
-            cursorToolGrp.add(btn);
-        }
-
-        if (toolSet.contains(org.geotools.swing.JMapFrame.Tool.ZOOM)) {
-            btn = new JButton(new ZoomInAction(mapPane));
-            btn.setName("ToolbarZoomInButton");
-            toolBar.add(btn);
-            cursorToolGrp.add(btn);
-
-            btn = new JButton(new ZoomOutAction(mapPane));
-            btn.setName("ToolbarZoomOutButton");
-            toolBar.add(btn);
-            cursorToolGrp.add(btn);
-
-            toolBar.addSeparator();
-        }
-
-        if (toolSet.contains(org.geotools.swing.JMapFrame.Tool.PAN)) {
-            btn = new JButton(new PanAction1(mapPane));
-            btn.setName("ToolbarPanButton");
-            toolBar.add(btn);
-            cursorToolGrp.add(btn);
-
-            //toolBar.addSeparator();
-        }
-
-        /*if (toolSet.contains(org.geotools.swing.JMapFrame.Tool.INFO)) {
-            btn = new JButton(new InfoAction(mapPane));
-            btn.setName("ToolbarInfoButton");
-            toolBar.add(btn);
-
-            toolBar.addSeparator();
-        }*/
-
-        if (toolSet.contains(org.geotools.swing.JMapFrame.Tool.RESET)) {
-            btn = new JButton(new ResetAction1(mapPane));
-            btn.setName("ToolbarResetButton");
-            toolBar.add(btn);
-        }
-
-        btn = new JButton(new OpenLayerAction(mapPane));
-        btn.setName("ToolbarResetButton");
-        toolBar.add(btn);
-
-
-        mapPane.setMapContent(mapContent);
-
-        statusBar = JMapStatusBar.createDefaultStatusBar(mapPane);
-        this.add(toolBar, BorderLayout.NORTH);
-        this.add(mapPane, BorderLayout.CENTER);
-        this.add(statusBar, BorderLayout.SOUTH);
     }
 
     private Style createRGBStyle() {

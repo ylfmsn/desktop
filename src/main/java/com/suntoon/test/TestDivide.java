@@ -8,6 +8,9 @@ package com.suntoon.test;
  * @Date 2019/5/5 0005下午 3:08
  * @Version 1.0
  */
+
+import org.jb2011.lnf.beautyeye.BeautyEyeLNFHelper;
+
 import javax.swing.*;
 import java.awt.*;
 public class TestDivide extends JFrame{
@@ -34,7 +37,6 @@ public class TestDivide extends JFrame{
         frame.add(panel1,BorderLayout.CENTER);
         frame.setVisible(true);
 
-
         JSplitPane js = new JSplitPane();
         JSplitPane js1 = new JSplitPane();
         JPanel jp1 = new JPanel();
@@ -42,7 +44,6 @@ public class TestDivide extends JFrame{
         JPanel jp2 = new JPanel();
         jp2.setBackground(Color.yellow);
         JPanel jp3 = new JPanel();
-
         jp3.setBackground(Color.pink);
         js1.setLeftComponent(jp1);
         js1.setRightComponent(jp2);
@@ -53,18 +54,19 @@ public class TestDivide extends JFrame{
         js.setVisible(true);
         js.setDividerLocation((double) 0.8);
         cp.add(js);
-
-
-
-
-
     }
 
     public static void main(String sd[]){
 
 
-
-
+        try{
+            //设置本属性将改变窗口边框样式定义
+            //BeautyEyeLNFHelper.frameBorderStyle = BeautyEyeLNFHelper.FrameBorderStyle.osLookAndFeelDecorated;
+            BeautyEyeLNFHelper.frameBorderStyle = BeautyEyeLNFHelper.FrameBorderStyle.translucencyAppleLike;
+            org.jb2011.lnf.beautyeye.BeautyEyeLNFHelper.launchBeautyEyeLNF();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         TestDivide frm=new TestDivide();
     }

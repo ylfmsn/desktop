@@ -1,20 +1,16 @@
 package com.suntoon.map.action;
 
 import com.suntoon.map.JMapPanel;
-import org.geotools.data.Parameter;
+import com.suntoon.map.localtree.JMapTree;
 import org.geotools.swing.JMapPane;
 import org.geotools.swing.action.MapAction;
-import org.geotools.swing.data.JParameterListWizard;
-import org.geotools.swing.wizard.JWizard;
-import org.geotools.util.KVP;
 
 import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
 
 /**
  * @ProjectionName desktop
@@ -30,6 +26,16 @@ public class OpenLayerAction extends MapAction {
 
     private JMapPane mapPane;
 
+    private JMapTree mapTree;
+
+    public JMapTree getMapTree() {
+        return mapTree;
+    }
+
+    public void setMapTree(JMapTree mapTree) {
+        this.mapTree = mapTree;
+    }
+
     public JMapPane getMapPane() {
         return this.mapPane;
     }
@@ -39,26 +45,26 @@ public class OpenLayerAction extends MapAction {
     }
 
     //导入操作
-    public OpenLayerAction(JMapPane mapPane) {
-        this.putValue(SMALL_ICON, new ImageIcon(this.getClass().getResource("/map/mOpenLayer.png")));
+    public OpenLayerAction(JMapPane mapPane, JMapTree mapTree) {
+        ImageIcon img = new ImageIcon(this.getClass().getResource("/map/mOpenLayer1.png"));
+        img.setImage(img.getImage().getScaledInstance(25, 25, Image.SCALE_DEFAULT));
+        this.putValue(SMALL_ICON, img);
         this.putValue(NAME, "");
         this.putValue(SHORT_DESCRIPTION, "导入GIS数据");
         setMapPane(mapPane);
+        this.mapTree = mapTree;
     }
-
-    //生成随机颜色的种子
-    private static Random rd = new Random();
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        List<Parameter<?>> list = new ArrayList<>();
+        /*List<Parameter<?>> list = new ArrayList<>();
         list.add(new Parameter<>("image", File.class, "Image",
                 "GeoTiff or World+Image to display as basemap",
                 new KVP(Parameter.EXT, "tif", Parameter.EXT, "jpg")));
         list.add(new Parameter<>("shape", File.class, "Shapefile", "Shapefile contents to display",
                 new KVP(Parameter.EXT, "shp")));
 
-        JParameterListWizard wizard = new JParameterListWizard("Image Lab",
+        JParameterListWizard wizard = new JParameterListWizard("加载数据",
                 "Fill in the following layers", list);
 
         int finish = wizard.showModalDialog();
@@ -68,11 +74,51 @@ public class OpenLayerAction extends MapAction {
         }
         File imageFile = (File) wizard.getConnectionParameters().get("image");
         File shapeFile = (File) wizard.getConnectionParameters().get("shape");
+        if (imageFile == null || shapeFile == null)
+            return;
         try {
             getMapPane().getMapContent().addLayer(new JMapPanel().displayShpLayers(shapeFile));
             getMapPane().getMapContent().addLayer(new JMapPanel().displayRasterLayers(imageFile));
         } catch (IOException e1) {
             e1.printStackTrace();
+        }*/
+        /*JFileDataStoreChooser fileDataStoreChooser = new JFileDataStoreChooser(new String[]{"tif", "tiff", "jpg", "shp"});
+        File file = JFileDataStoreChooser.showOpenFile(new String[]{"tif", "tiff", "jpg", "shp"}, null);
+        fileDataStoreChooser.setMultiSelectionEnabled(true);*/
+
+        JFileChooser fileChooser = new JFileChooser();
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("tif; tiff; jpg; shp", "tif", "tiff", "jpg", "shp");
+        fileChooser.setFileFilter(filter);
+        fileChooser.setMultiSelectionEnabled(true);
+        int finish = fileChooser.showOpenDialog(new Label("选择数据"));
+        File[] files = fileChooser.getSelectedFiles();
+
+        if (finish == JFileChooser.APPROVE_OPTION) {
+            if (files != null) {
+                for (File file : files) {
+                    mapTree.addTreeNode(file.getAbsolutePath());
+                    String ext = file.getName().substring(file.getName().lastIndexOf(".") + 1);
+                    try {
+                        if ("shp".equals(ext)) {
+                            getMapPane().getMapContent().addLayer(new JMapPanel().displayShpLayers(file));
+                        } else if ("tif".equals(ext) || "tiff".equals(ext) || "jpg".equals(ext)) {
+                            getMapPane().getMapContent().addLayer(new JMapPanel().displayRasterLayers(file));
+                        } else {
+                            JOptionPane.showMessageDialog(null, "您加载的数据格式不正确，请重新选择加载数据！", "加载数据提示框", JOptionPane.ERROR_MESSAGE);
+                        }
+                    } catch (IOException e1) {
+                        e1.printStackTrace();
+                    }
+                }
+            } else {
+                return;
+            }
+        } else {
+            return;
         }
+
+
+        //mapTree.addTreeNode(imageFile.getAbsolutePath());
+        //mapTree.addTreeNode(shapeFile.getAbsolutePath());
     }
 }

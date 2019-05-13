@@ -50,34 +50,23 @@ public class JMapFrame extends JFrame {
         panel.add(label, BorderLayout.CENTER);
         this.add(panel,BorderLayout.NORTH);
 
+        JMapPanel mapPanel = new JMapPanel();
+        this.add(mapPanel, BorderLayout.CENTER);
+
         JPanel panel1 = new JPanel(new BorderLayout());
-        panel1.setPreferredSize(new Dimension(200, 700));
+        panel1.setPreferredSize(new Dimension(300, 700));
         panel1.setBorder(BorderFactory.createLineBorder(Color.lightGray));
-        JLabel label1 = new JLabel("本地数据", JLabel.CENTER);
-        panel1.add(label1, BorderLayout.CENTER);
-        this.add(panel1,BorderLayout.EAST);
+        //JLabel label1 = new JLabel("本地数据", JLabel.CENTER);
+        panel1.add(new JLocalDataPanel(mapPanel), BorderLayout.CENTER);
+        this.add(panel1, BorderLayout.EAST);
 
         JPanel panel2 = new JPanel(new BorderLayout());
-        panel2.setPreferredSize(new Dimension(200, 700));
+        panel2.setPreferredSize(new Dimension(300, 700));
         panel2.setBorder(BorderFactory.createLineBorder(Color.lightGray));
         JLabel label2 = new JLabel("平板数据", JLabel.CENTER);
         panel2.add(label2, BorderLayout.CENTER);
         this.add(panel2, BorderLayout.WEST);
-
-        JPanel panel3 = new JPanel(new BorderLayout());
-        panel3.setBorder(BorderFactory.createLineBorder(Color.lightGray));
-        panel3.add(toolBar, BorderLayout.NORTH);
-        panel3.add(canvas, BorderLayout.CENTER);
-        this.add(panel3, BorderLayout.CENTER);
-
-        JPanel panel4 = new JPanel(new BorderLayout());
-        panel4.setPreferredSize(new Dimension(200, 40));
-        panel4.setBorder(BorderFactory.createLineBorder(Color.lightGray));
-        JLabel label4 = new JLabel("map", JLabel.CENTER);
-        panel4.add(label4, BorderLayout.CENTER);
-        this.add(panel4,BorderLayout.SOUTH);
     }
-
 
     public static void main(String args[]){
 
