@@ -4,19 +4,19 @@ import org.geotools.swing.MapPane;
 
 /**
  * @ProjectionName desktop
- * @ClassName ZoomInAction
- * @Description 放大操作
+ * @ClassName NoToolAction
+ * @Description 取消工具功能
  * @Author YueLifeng
- * @Date 2019/5/14 0014下午 6:17
+ * @Date 2019/5/14 0014下午 6:20
  * @Version 1.0
  */
-public class ZoomInAction extends org.geotools.swing.action.ZoomInAction {
+public class NoToolAction extends org.geotools.swing.action.NoToolAction {
 
     private static final long serivalVersionUID = -1310517891302678341L;
 
-    public ZoomInAction(MapPane mapPane) {
+    public NoToolAction(MapPane mapPane) {
         super(mapPane);
         putValue(NAME, "");
-        putValue(SHORT_DESCRIPTION, "放大");
+        putValue(SHORT_DESCRIPTION, "取消工具功能");
     }
 }

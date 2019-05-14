@@ -19,13 +19,13 @@ import java.util.Random;
  * @Date 2019/5/9 0009上午 10:18
  * @Version 1.0
  */
-public class MyDomainCheckBoxTree extends JFrame {
+public class MyDomainCheckBoxTree1 extends JFrame {
 
     HashSet<TreePath> includedPaths = new HashSet<>();
     HashSet<TreePath> excludedPaths = new HashSet<>();
     TreeModel treeModel;
 
-    public MyDomainCheckBoxTree(boolean testDefault) {
+    public MyDomainCheckBoxTree1(boolean testDefault) {
         super();
         setSize(500, 500);
         this.getContentPane().setLayout(new BorderLayout());
@@ -172,7 +172,7 @@ public class MyDomainCheckBoxTree extends JFrame {
             //BeautyEyeLNFHelper.frameBorderStyle = BeautyEyeLNFHelper.FrameBorderStyle.translucencyAppleLike;
             //BeautyEyeLNFHelper.frameBorderStyle = BeautyEyeLNFHelper.FrameBorderStyle.generalNoTranslucencyShadow;
             BeautyEyeLNFHelper.frameBorderStyle = BeautyEyeLNFHelper.FrameBorderStyle.translucencySmallShadow;
-            org.jb2011.lnf.beautyeye.BeautyEyeLNFHelper.launchBeautyEyeLNF();
+            BeautyEyeLNFHelper.launchBeautyEyeLNF();
             UIManager.put("RootPane.setupButtonVisible", false);
         } catch (Exception e) {
             e.printStackTrace();
@@ -181,7 +181,7 @@ public class MyDomainCheckBoxTree extends JFrame {
         boolean test = false;
         if( args.length > 0 && args[0].equalsIgnoreCase("test") )
             test = true;
-        MyDomainCheckBoxTree m = new MyDomainCheckBoxTree(test);
+        MyDomainCheckBoxTree1 m = new MyDomainCheckBoxTree1(test);
         m.setVisible(true);
     }
 

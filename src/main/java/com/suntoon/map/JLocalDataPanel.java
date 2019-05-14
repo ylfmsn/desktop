@@ -1,6 +1,6 @@
 package com.suntoon.map;
 
-import com.suntoon.map.action.OpenLayerAction;
+import com.suntoon.map.oldaction.OpenLayerAction;
 import com.suntoon.map.localtree.JMapTree;
 import org.geotools.map.MapContent;
 import org.geotools.swing.JMapPane;
@@ -44,10 +44,11 @@ public class JLocalDataPanel extends JMapPane{
         JButton btn;
         toolBar = new JToolBar();
         btn = new JButton(new OpenLayerAction(mapPane, mapTree));
-        btn.setName("ToolbarResetButton");
+        btn.setName("Import GIS Data");
         toolBar.add(btn);
 
         this.add(toolBar, BorderLayout.NORTH);
+        toolBar.setFloatable(false);
         this.add(new JScrollPane(mapTree), BorderLayout.CENTER);
     }
 

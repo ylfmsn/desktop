@@ -1,34 +1,22 @@
 package com.suntoon.map.action;
 
-import com.suntoon.map.MapPane;
-import com.suntoon.map.tools.ZoomOutTool;
-
-import javax.swing.*;
-import java.awt.event.ActionEvent;
+import org.geotools.swing.MapPane;
 
 /**
  * @ProjectionName desktop
  * @ClassName ZoomOutAction
- * @Description 缩小操作
+ * @Description TODO
  * @Author YueLifeng
- * @Date 2019/4/29 0029下午 2:42
+ * @Date 2019/5/14 0014下午 6:19
  * @Version 1.0
  */
-public class ZoomOutAction extends AbstractMapAction {
+public class ZoomOutAction extends org.geotools.swing.action.ZoomOutAction {
 
-    private static final long serialVersionUID = 2667458318140535983L;
+    private static final long serivalVersionUID = -1310517891302678341L;
 
-    //缩小操作 构造器
     public ZoomOutAction(MapPane mapPane) {
         super(mapPane);
-        this.putValue(SMALL_ICON, new ImageIcon(this.getClass().getResource("/map/mActionZoomOut.png")));
-        this.putValue(NAME, "");
-        this.putValue(SHORT_DESCRIPTION, "缩小");
-    }
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        if (this.getMapPane() != null)
-            this.getMapPane().setCursorTool(new ZoomOutTool());
+        putValue(NAME, "");
+        putValue(SHORT_DESCRIPTION, "缩小");
     }
 }

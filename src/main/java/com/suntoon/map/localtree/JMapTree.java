@@ -1,6 +1,8 @@
 package com.suntoon.map.localtree;
 
 import org.geotools.data.Parameter;
+import org.geotools.map.Layer;
+import org.geotools.swing.JMapPane;
 import org.geotools.swing.data.JParameterListWizard;
 import org.geotools.swing.wizard.JWizard;
 import org.geotools.util.KVP;
@@ -27,6 +29,15 @@ import java.util.Map;
 public class JMapTree extends JTree {
 
     private CheckBoxTreeNode rootNode;
+    private JMapPane mapPane;
+
+    public JMapPane getMapPane() {
+        return mapPane;
+    }
+
+    public void setMapPane(JMapPane mapPane) {
+        this.mapPane = mapPane;
+    }
 
     public JMapTree() {
         super();
@@ -47,7 +58,7 @@ public class JMapTree extends JTree {
         this.setCellRenderer(new CheckBoxTreeCellRenderer());
     }
 
-    public void addTreeNode(String path) {
+    public void addTreeNode(String path, Layer layer) {
 
         int count = rootNode.getChildCount();
         if (count > 0) {
@@ -60,16 +71,17 @@ public class JMapTree extends JTree {
                     Map rootMap2 = new HashMap();
                     rootMap2.put("path", path);
                     rootMap2.put("name", path.substring(path.lastIndexOf("\\") + 1));
+                    rootMap2.put("layer", layer);
                     CheckBoxTreeNode childTreeNode2 = new CheckBoxTreeNode(rootMap2);
                     //childTreeNode2.setSelected(true);
                     childNode.add(childTreeNode2);
 
                     DefaultTreeModel model = new DefaultTreeModel(rootNode);
-                    this.addMouseListener(new CheckBoxTreeNodeSelectionListener() {
+                    /*this.addMouseListener(new CheckBoxTreeNodeSelectionListener() {
 
-                    });
-                    this.setModel(model);
-                    this.setCellRenderer(new CheckBoxTreeCellRenderer());
+                    });*/
+                    setModel(model);
+                    //this.setCellRenderer(new CheckBoxTreeCellRenderer());
 
                     return;
                 }
@@ -84,17 +96,18 @@ public class JMapTree extends JTree {
         Map rootMap1 = new HashMap();
         rootMap1.put("path", path);
         rootMap1.put("name", path.substring(path.lastIndexOf("\\") + 1));
+        rootMap1.put("layer", layer);
         CheckBoxTreeNode childTreeNode1 = new CheckBoxTreeNode(rootMap1);
         childTreeNode.add(childTreeNode1);
         //childTreeNode1.setSelected(true);
         rootNode.add(childTreeNode);
 
         DefaultTreeModel model = new DefaultTreeModel(rootNode);
-        this.addMouseListener(new CheckBoxTreeNodeSelectionListener() {
+        /*this.addMouseListener(new CheckBoxTreeNodeSelectionListener() {
 
-        });
-        this.setModel(model);
-        this.setCellRenderer(new CheckBoxTreeCellRenderer());
+        });*/
+        setModel(model);
+        //this.setCellRenderer(new CheckBoxTreeCellRenderer());
     }
 
     private static CheckBoxTreeNode traverseFolder(String path) {
@@ -196,8 +209,8 @@ public class JMapTree extends JTree {
                 String imageStr = imageFile.getAbsolutePath();
                 String shapeStr = shapeFile.getAbsolutePath();
 
-                tree.addTreeNode(imageStr);
-                tree.addTreeNode(shapeStr);
+                /*tree.addTreeNode(imageStr);
+                tree.addTreeNode(shapeStr);*/
             }
 
         });

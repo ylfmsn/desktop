@@ -1,4 +1,4 @@
-package com.suntoon.map.action;
+package com.suntoon.map.oldaction;
 
 import org.geotools.swing.MapPane;
 import org.geotools.swing.action.ResetAction;
@@ -17,13 +17,10 @@ public class ResetAction1 extends ResetAction {
 
     private static final long serialVersionUID = -1310517891302678241L;
 
-
     public ResetAction1(MapPane mapPane) {
         super(mapPane);
         this.putValue(SMALL_ICON, new ImageIcon(this.getClass().getResource("/map/mActionZoomFullExtent.png")));
         this.putValue(NAME, "");
         this.putValue(SHORT_DESCRIPTION, "重置");
     }
-
-
 }

@@ -1,11 +1,12 @@
 package com.suntoon.map.localtree;
 
+import org.geotools.map.Layer;
+
 import javax.swing.*;
 import javax.swing.tree.DefaultTreeModel;
 import javax.swing.tree.TreePath;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.io.File;
 import java.util.Map;
 
 /**
@@ -20,58 +21,91 @@ public class CheckBoxTreeNodeSelectionListener extends MouseAdapter {
 
     @Override
     public void mouseClicked(MouseEvent e) {
+
         JTree tree = (JTree) e.getSource();
-        int x = e.getX();
-        int y = e.getY();
-        int row = tree.getRowForLocation(x, y);
-        TreePath path = tree.getPathForRow(row);
-        if (path != null) {
-            CheckBoxTreeNode node = (CheckBoxTreeNode) path.getLastPathComponent();
-            if (node != null) {
-                boolean isSelected = !node.isSelected();
-                node.setSelected(isSelected);
-                ((DefaultTreeModel) tree.getModel()).nodeStructureChanged(node);
-                if (node.isSelected()) {
-                    System.out.println("--------------->" + node.toString());
-                    txtForAllNode(node);
-                }
-            }
-        }
-    }
 
+        if (SwingUtilities.isLeftMouseButton(e)) {
+            int x = e.getX();
+            int y = e.getY();
+            int row = tree.getRowForLocation(x, y);
+            TreePath path = tree.getPathForRow(row);
+            if (path != null) {
+                CheckBoxTreeNode node = (CheckBoxTreeNode) path.getLastPathComponent();
+                if (node != null) {
+                    boolean isSelected = !node.isSelected();
+                    node.setSelected(isSelected);
+                    ((DefaultTreeModel) tree.getModel()).nodeStructureChanged(node);
 
-    private static void txtForAllNode(CheckBoxTreeNode node) {
+                    if (!node.isLeaf() && node.isSelected()) {    //选中目录，遍历子文件夹，加载文件夹中的图层数据
 
-        if (node.isSelected()) {
-            int childCount = node.getChildCount();
+                        int childCount = node.getChildCount();
+                        for (int i = 0; i < childCount; i++) {
+                            CheckBoxTreeNode cbtn = (CheckBoxTreeNode) node.getChildAt(i);
+                            if (!cbtn.isLeaf()) {     //文件夹, 选中root节点的情况下
+                                int childNum = cbtn.getChildCount();
+                                for (int m = 0; m < childNum; m++) {
+                                    CheckBoxTreeNode cbt = (CheckBoxTreeNode) cbtn.getChildAt(m);
 
-            for (int i = 0; i < childCount; i++) {
-
-                CheckBoxTreeNode childNode = (CheckBoxTreeNode) node.getChildAt(i);
-
-                if (childNode.isSelected()) {
-
-                    if (childNode.getChildCount() == 0) {     //文件或者空文件件
-                        Map map = (Map) childNode.getTreeAttribute();
-                        String path = map.get("path").toString();     //节点文件/文件件路径
-
-                        File file = new File(path);
-                        if (file.isDirectory()) {       //空文件夹
-                            //不做任何处理
-                        } else {
-                            String ext = file.getName().substring(file.getName().lastIndexOf(".") + 1);
-                            if ("shp".equals(ext)) {
-                                System.out.println(map.get("name").toString());
-                                System.out.println(map.get("path").toString());
+                                    Map dataMap = (Map) cbt.getTreeAttribute();
+                                    Layer layer = (Layer) dataMap.get("layer");
+                                    layer.setVisible(true);
+                                }
+                            } else {    //选中root下文件夹的情况
+                                Map dataMap = (Map) cbtn.getTreeAttribute();
+                                Layer layer = (Layer) dataMap.get("layer");
+                                layer.setVisible(true);
                             }
                         }
-                    } else {     //文件件
-                        txtForAllNode(childNode);
+                    } else if (node.isLeaf() && node.isSelected() && node.getParent() != null){
+                        Map dataMap = (Map) node.getTreeAttribute();
+                        Layer layer = (Layer) dataMap.get("layer");
+                        layer.setVisible(true);
+                    } else if (!node.isLeaf() && !node.isSelected()) {
+                        int childCount = node.getChildCount();
+                        for (int i = 0; i < childCount; i++) {
+                            CheckBoxTreeNode cbtn = (CheckBoxTreeNode) node.getChildAt(i);
+                            if (!cbtn.isLeaf()) {     //文件夹, 取消选中root节点的情况下
+                                int childNum = cbtn.getChildCount();
+                                for (int m = 0; m < childNum; m++) {
+                                    CheckBoxTreeNode cbt = (CheckBoxTreeNode) cbtn.getChildAt(m);
+
+                                    Map dataMap = (Map) cbt.getTreeAttribute();
+                                    Layer layer = (Layer) dataMap.get("layer");
+                                    layer.setVisible(false);
+                                }
+                            } else {    //取消选中root下文件夹的情况
+                                Map dataMap = (Map) cbtn.getTreeAttribute();
+                                Layer layer = (Layer) dataMap.get("layer");
+                                layer.setVisible(false);
+                            }
+                        }
+                    } else if (node.isLeaf() && !node.isSelected() && node.getParent() != null){
+                        Map dataMap = (Map) node.getTreeAttribute();
+                        Layer layer = (Layer) dataMap.get("layer");
+                        layer.setVisible(false);
                     }
                 }
-
             }
 
+        } else if (SwingUtilities.isRightMouseButton(e)) {
+            JMapTree mapTree = (JMapTree) e.getSource();
+            int row = mapTree.getClosestRowForLocation(e.getX(), e.getY());
+            mapTree.setSelectionRow(row);
+            TreePath path = mapTree.getPathForRow(row);
+            if (path != null) {
+                CheckBoxTreeNode node = (CheckBoxTreeNode) path.getLastPathComponent();
+                CheckBoxTreeContextMenu popupMenu = new CheckBoxTreeContextMenu(mapTree, node);
+                popupMenu.show(e.getComponent(), e.getX(), e.getY());
+            }
         }
+
+
+
+
+
+
+
+
+
     }
 }

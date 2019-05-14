@@ -82,13 +82,13 @@ public class JXDatePicker extends JComponent {
 
     public static final String LINK_PANEL = "linkPanel";
 
-    /** action command used for commit actionEvent. */
+    /** oldaction command used for commit actionEvent. */
     public static final String COMMIT_KEY = "datePickerCommit";
-    /** action command used for cancel actionEvent. */
+    /** oldaction command used for cancel actionEvent. */
     public static final String CANCEL_KEY = "datePickerCancel";
-    /** action key for navigate home action */
+    /** oldaction key for navigate home oldaction */
     public static final String HOME_NAVIGATE_KEY = "navigateHome";
-    /** action key for commit home action */
+    /** oldaction key for commit home oldaction */
     public static final String HOME_COMMIT_KEY = "commitHome";
 
     private static final DateFormat[] EMPTY_DATE_FORMATS = new DateFormat[0];
@@ -770,7 +770,7 @@ public class JXDatePicker extends JComponent {
     /**
      * Removes an ActionListener.
      *
-     * @param l The action listener to remove.
+     * @param l The oldaction listener to remove.
      */
     public void removeActionListener(ActionListener l) {
         listenerMap.remove(ActionListener.class, l);
@@ -914,7 +914,7 @@ public class JXDatePicker extends JComponent {
                 select = false;
                 Action delegate = getActionMap().get(key);
                 /*
-                 * PatrykRy: Commit today date only when commit action is enabled.
+                 * PatrykRy: Commit today date only when commit oldaction is enabled.
                  * Home navigate is always enabled.
                  */
                 if (delegate !=  null && delegate.isEnabled()) {

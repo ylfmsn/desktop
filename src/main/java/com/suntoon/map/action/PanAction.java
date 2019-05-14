@@ -1,34 +1,22 @@
 package com.suntoon.map.action;
 
-import com.suntoon.map.MapPane;
-import com.suntoon.map.tools.PanTool;
-
-import javax.swing.*;
-import java.awt.event.ActionEvent;
+import org.geotools.swing.MapPane;
 
 /**
  * @ProjectionName desktop
  * @ClassName PanAction
- * @Description 移动操作
+ * @Description 地图拖动
  * @Author YueLifeng
- * @Date 2019/4/29 0029下午 2:51
+ * @Date 2019/5/14 0014下午 6:15
  * @Version 1.0
  */
-public class PanAction extends AbstractMapAction {
+public class PanAction extends org.geotools.swing.action.PanAction {
 
-    private static final long serialVersionUID = -8580473973445330548L;
+    private static final long serivalVersionUID = -1310517891302678341L;
 
-    //移动操作
     public PanAction(MapPane mapPane) {
         super(mapPane);
-        this.putValue(SMALL_ICON, new ImageIcon(this.getClass().getResource("/map/pan_mode.gif")));
-        this.putValue(NAME, "");
-        this.putValue(SHORT_DESCRIPTION, "拖动");
-    }
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        if (this.getMapPane() != null)
-            this.getMapPane().setCursorTool(new PanTool());
+        putValue(NAME, "");
+        putValue(SHORT_DESCRIPTION, "拖动");
     }
 }

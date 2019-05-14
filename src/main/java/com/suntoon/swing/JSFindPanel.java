@@ -123,9 +123,9 @@ public class JSFindPanel extends AbstractPatternPanel {
         getAction(FIND_PREVIOUS_ACTION_COMMAND).setEnabled(enabled);
     }
 
-    //--------------------- action callbacks
+    //--------------------- oldaction callbacks
     /**
-     * Action callback for Find action.
+     * Action callback for Find oldaction.
      * Find next/previous match using current setting of direction flag.
      *
      */
@@ -135,7 +135,7 @@ public class JSFindPanel extends AbstractPatternPanel {
     }
 
     /**
-     * Action callback for FindNext action.
+     * Action callback for FindNext oldaction.
      * Sets direction flag to forward and calls find.
      */
     public void findNext() {
@@ -144,7 +144,7 @@ public class JSFindPanel extends AbstractPatternPanel {
     }
 
     /**
-     * Action callback for FindPrevious action.
+     * Action callback for FindPrevious oldaction.
      * Sets direction flag to previous and calls find.
      */
     public void findPrevious() {
@@ -153,7 +153,7 @@ public class JSFindPanel extends AbstractPatternPanel {
     }
 
     /**
-     * Common standalone method to perform search. Used by the action callback methods
+     * Common standalone method to perform search. Used by the oldaction callback methods
      * for Find/FindNext/FindPrevious actions. Finds next/previous match using current
      * setting of direction flag. Result is being reporred using showFoundMessage and
      * showNotFoundMessage methods respectively.

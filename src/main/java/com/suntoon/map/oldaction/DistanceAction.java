@@ -1,4 +1,4 @@
-package com.suntoon.map.action;
+package com.suntoon.map.oldaction;
 
 import com.suntoon.map.MapPane;
 import com.suntoon.map.tools.DistanceTool;

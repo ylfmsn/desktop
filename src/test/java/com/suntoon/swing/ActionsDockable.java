@@ -43,7 +43,7 @@ public class ActionsDockable extends JPanel {
         // Create the dockable around the content component.
         Dockable dockable = new DefaultDockable("Window1", textPanel, "Window", new ImageIcon(ResourceLoader.getResource(ResourceLoader.IMAGE_OPEN_LAYER)));
 
-        // Decorate the dockable with a close action.
+        // Decorate the dockable with a close oldaction.
         dockable = new StateActionDockable(dockable, new DefaultDockableStateActionFactory(), DockableState.statesClosed());
 
         // Decorate the dockable other actions.

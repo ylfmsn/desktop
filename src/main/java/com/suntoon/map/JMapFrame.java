@@ -1,9 +1,6 @@
 package com.suntoon.map;
 
 import com.suntoon.map.control.JMapToolBar;
-import com.suntoon.map.plugins.ScalebarPlugin;
-import org.geotools.map.MapContent;
-import org.jb2011.lnf.beautyeye.BeautyEyeLNFHelper;
 
 import javax.swing.*;
 import java.awt.*;
@@ -39,9 +36,6 @@ public class JMapFrame extends JFrame {
     private void initCompents(){
 
         this.setLayout(new BorderLayout());
-        canvas = new JMapCanvas(new MapContent());
-        toolBar = new JMapToolBar(canvas);
-        canvas.addPlugin(new ScalebarPlugin("标尺", ScalebarPlugin.GROUP_LAYER, canvas));
 
         JPanel panel = new JPanel(new BorderLayout());
         panel.setPreferredSize(new Dimension(1024, 100));
@@ -66,19 +60,5 @@ public class JMapFrame extends JFrame {
         JLabel label2 = new JLabel("平板数据", JLabel.CENTER);
         panel2.add(label2, BorderLayout.CENTER);
         this.add(panel2, BorderLayout.WEST);
-    }
-
-    public static void main(String args[]){
-
-        try{
-            //设置本属性将改变窗口边框样式定义
-            //BeautyEyeLNFHelper.frameBorderStyle = BeautyEyeLNFHelper.FrameBorderStyle.osLookAndFeelDecorated;
-            BeautyEyeLNFHelper.frameBorderStyle = BeautyEyeLNFHelper.FrameBorderStyle.translucencyAppleLike;
-            org.jb2011.lnf.beautyeye.BeautyEyeLNFHelper.launchBeautyEyeLNF();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        JMapFrame test = new JMapFrame();
     }
 }

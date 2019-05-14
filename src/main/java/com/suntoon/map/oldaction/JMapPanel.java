@@ -1,6 +1,5 @@
-package com.suntoon.map;
+package com.suntoon.map.oldaction;
 
-import com.suntoon.map.action.*;
 import org.geotools.coverage.GridSampleDimension;
 import org.geotools.coverage.grid.GridCoverage2D;
 import org.geotools.coverage.grid.io.AbstractGridFormat;
@@ -20,6 +19,11 @@ import org.geotools.map.MapContent;
 import org.geotools.styling.*;
 import org.geotools.swing.JMapFrame;
 import org.geotools.swing.JMapPane;
+import org.geotools.swing.action.*;
+import org.geotools.swing.action.PanAction;
+import org.geotools.swing.action.ResetAction;
+import org.geotools.swing.action.ZoomInAction;
+import org.geotools.swing.action.ZoomOutAction;
 import org.geotools.swing.control.JMapStatusBar;
 import org.geotools.swing.tool.ScrollWheelTool;
 import org.opengis.filter.FilterFactory2;
@@ -83,21 +87,20 @@ public class JMapPanel extends JMapPane{
         }
 
         if (toolSet.contains(JMapFrame.Tool.POINTER)) {
-            //btn = new JButton(new NoToolAction(mapPane));
             btn = new JButton(new NoToolAction(mapPane));
-            //btn.setName("ToolbarPointerButton");
+            btn.setName("ToolbarPointerButton");
             toolBar.add(btn);
             cursorToolGrp.add(btn);
         }
 
         if (toolSet.contains(JMapFrame.Tool.ZOOM)) {
             btn = new JButton(new ZoomInAction(mapPane));
-            //btn.setName("ToolbarZoomInButton");
+            btn.setName("ToolbarZoomInButton");
             toolBar.add(btn);
             cursorToolGrp.add(btn);
 
             btn = new JButton(new ZoomOutAction(mapPane));
-            //btn.setName("ToolbarZoomOutButton");
+            btn.setName("ToolbarZoomOutButton");
             toolBar.add(btn);
             cursorToolGrp.add(btn);
 
@@ -106,24 +109,24 @@ public class JMapPanel extends JMapPane{
 
         if (toolSet.contains(JMapFrame.Tool.PAN)) {
             btn = new JButton(new PanAction(mapPane));
-            //btn.setName("ToolbarPanButton");
+            btn.setName("ToolbarPanButton");
             toolBar.add(btn);
             cursorToolGrp.add(btn);
 
             //toolBar.addSeparator();
         }
 
-        if (toolSet.contains(org.geotools.swing.JMapFrame.Tool.INFO)) {
+        if (toolSet.contains(JMapFrame.Tool.INFO)) {
             btn = new JButton(new InfoAction(mapPane));
-            //btn.setName("ToolbarInfoButton");
+            btn.setName("ToolbarInfoButton");
             toolBar.add(btn);
 
             toolBar.addSeparator();
         }
 
-        if (toolSet.contains(org.geotools.swing.JMapFrame.Tool.RESET)) {
+        if (toolSet.contains(JMapFrame.Tool.RESET)) {
             btn = new JButton(new ResetAction(mapPane));
-            //btn.setName("ToolbarResetButton");
+            btn.setName("ToolbarResetButton");
             toolBar.add(btn);
         }
 

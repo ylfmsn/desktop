@@ -2,7 +2,7 @@ package com.suntoon.map.control;
 
 import com.suntoon.map.MapListener;
 import com.suntoon.map.MapPane;
-import com.suntoon.map.action.*;
+import com.suntoon.map.oldaction.*;
 
 import javax.swing.*;
 

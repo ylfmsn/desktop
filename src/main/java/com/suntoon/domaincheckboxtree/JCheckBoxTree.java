@@ -199,7 +199,7 @@ public class JCheckBoxTree extends JTree {
             }
         });
 
-        // added NEW for lazy action
+        // added NEW for lazy oldaction
         // Do the checkbox update just before the tree expands
         if( tweListener == null )
             tweListener =

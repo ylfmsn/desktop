@@ -41,14 +41,14 @@ public abstract class AbstractPatternPanel extends JPanel {
     //------------------------ actions
 
     /**
-     * Callback action bound to MATCH_ACTION_COMMAND.
+     * Callback oldaction bound to MATCH_ACTION_COMMAND.
      */
     public abstract void match();
 
     /**
      * convenience method for type-cast to AbstractActionExt.
      *
-     * @param key Key to retrieve action
+     * @param key Key to retrieve oldaction
      * @return Action bound to this key
      * @see AbstractActionExt
      */
@@ -130,13 +130,13 @@ public abstract class AbstractPatternPanel extends JPanel {
 
 
     /**
-     * creates, configures and returns a bound state action on a boolean property
+     * creates, configures and returns a bound state oldaction on a boolean property
      * of the PatternModel.
      *
      * @param command the actionCommand - same as key to find localizable resources
      * @param methodName the method on the PatternModel to call on item state changed
      * @param initial the initial value of the property
-     * @return newly created action
+     * @return newly created oldaction
      */
     protected AbstractActionExt createModelStateAction(String command, String methodName, boolean initial) {
         String actionName = getUIString(command);
@@ -149,12 +149,12 @@ public abstract class AbstractPatternPanel extends JPanel {
     }
 
     /**
-     * creates, configures and returns a bound action to the given method of
+     * creates, configures and returns a bound oldaction to the given method of
      * this.
      *
      * @param actionCommand the actionCommand, same as key to find localizable resources
      * @param methodName the method to call an actionPerformed.
-     * @return newly created action
+     * @return newly created oldaction
      */
     protected AbstractActionExt createBoundAction(String actionCommand, String methodName) {
         String actionName = getUIString(actionCommand);
@@ -288,7 +288,7 @@ public abstract class AbstractPatternPanel extends JPanel {
     /**
      * called from listening to empty property of PatternModel.
      *
-     * this implementation synch's the enabled state of the action with
+     * this implementation synch's the enabled state of the oldaction with
      * MATCH_ACTION_COMMAND to !empty.
      *
      */

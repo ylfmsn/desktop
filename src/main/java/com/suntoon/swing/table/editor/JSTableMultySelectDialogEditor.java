@@ -376,10 +376,10 @@ public class JSTableMultySelectDialogEditor extends AbstractCellEditor implement
         }
 
         /**
-         * When an action is performed, editing is ended.
+         * When an oldaction is performed, editing is ended.
          *
          * @param e
-         *            the action event
+         *            the oldaction event
          * @see #stopCellEditing
          */
         public void actionPerformed(ActionEvent e) {
@@ -390,7 +390,7 @@ public class JSTableMultySelectDialogEditor extends AbstractCellEditor implement
          * When an item's state changes, editing is ended.
          *
          * @param e
-         *            the action event
+         *            the oldaction event
          * @see #stopCellEditing
          */
         public void itemStateChanged(ItemEvent e) {

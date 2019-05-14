@@ -367,7 +367,7 @@ public class JSRadioButtonGroup<V, T> extends JPanel {
         for (Enumeration<AbstractButton> en = buttonGroup.getElements(); en.hasMoreElements();) {
             final AbstractButton button = en.nextElement();
             /*
-             * We don't want to enable a button where the action does not permit
+             * We don't want to enable a button where the oldaction does not permit
              * it.
              */
             if (enabled && button.getAction() != null && !button.getAction().isEnabled()) {

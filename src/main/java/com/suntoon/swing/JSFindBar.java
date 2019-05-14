@@ -131,12 +131,12 @@ public class JSFindBar extends JSFindPanel {
         }
     }
 
-    // --------------------------- action call back
+    // --------------------------- oldaction call back
     /**
-     * Action callback method for bound action JXDialog.CLOSE_ACTION_COMMAND.
+     * Action callback method for bound oldaction JXDialog.CLOSE_ACTION_COMMAND.
      *
      * Here: does nothing. Subclasses can override to define custom "closing"
-     * behaviour. Alternatively, any client can register a custom action with
+     * behaviour. Alternatively, any client can register a custom oldaction with
      * the actionMap.
      *
      *

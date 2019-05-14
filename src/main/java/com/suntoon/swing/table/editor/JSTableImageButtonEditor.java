@@ -126,10 +126,10 @@ public class JSTableImageButtonEditor extends AbstractCellEditor implements Tree
         }
 
         /**
-         * When an action is performed, editing is ended.
+         * When an oldaction is performed, editing is ended.
          *
          * @param e
-         *            the action event
+         *            the oldaction event
          * @see #stopCellEditing
          */
         @Override
@@ -141,7 +141,7 @@ public class JSTableImageButtonEditor extends AbstractCellEditor implements Tree
          * When an item's state changes, editing is ended.
          *
          * @param e
-         *            the action event
+         *            the oldaction event
          * @see #stopCellEditing
          */
         @Override
