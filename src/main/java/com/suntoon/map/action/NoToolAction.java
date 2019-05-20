@@ -17,6 +17,6 @@ public class NoToolAction extends org.geotools.swing.action.NoToolAction {
     public NoToolAction(MapPane mapPane) {
         super(mapPane);
         putValue(NAME, "");
-        putValue(SHORT_DESCRIPTION, "取消工具功能");
+        putValue(SHORT_DESCRIPTION, "鼠标");
     }
 }

@@ -1,10 +1,14 @@
 package com.suntoon.map.localtree;
 
+import com.suntoon.map.style.JSimpleStyleDialog;
+import com.suntoon.map.table.MapTableFrame;
+import org.geotools.geometry.jts.ReferencedEnvelope;
 import org.geotools.map.FeatureLayer;
 import org.geotools.map.Layer;
 import org.geotools.map.MapContent;
+import org.geotools.map.MapViewport;
 import org.geotools.styling.Style;
-import org.geotools.swing.styling.JSimpleStyleDialog;
+import org.opengis.referencing.crs.CoordinateReferenceSystem;
 
 import javax.swing.*;
 import javax.swing.tree.DefaultTreeModel;
@@ -28,6 +32,8 @@ public class CheckBoxTreeContextMenu extends JPopupMenu {
 
     private JMenuItem remove;
     private JMenuItem style;
+    private JMenuItem extent;
+    private JMenuItem attribute;
 
     private CheckBoxTreeNode node;
     private JMapTree tree;
@@ -42,7 +48,7 @@ public class CheckBoxTreeContextMenu extends JPopupMenu {
 
     private void addPopupMenuItems() {
 
-        remove = new JMenuItem("移除   ");
+        remove = new JMenuItem("移除图层   ");
         remove.setEnabled(true);
         //remove.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_Z, Toolkit.getDefaultToolkit().getMenuShortcutKeyMask()));
         remove.addActionListener(new ActionListener() {
@@ -76,7 +82,7 @@ public class CheckBoxTreeContextMenu extends JPopupMenu {
         add(remove);
         addSeparator();
 
-        style = new JMenuItem("样式   ");
+        style = new JMenuItem("样式设置   ");
         style.setEnabled(true);
         style.addActionListener(new ActionListener() {
             @Override
@@ -86,7 +92,7 @@ public class CheckBoxTreeContextMenu extends JPopupMenu {
                     Map childMap = (Map) node.getTreeAttribute();
                     Layer layer = (Layer) childMap.get("layer");
                     FeatureLayer styleLayer = (FeatureLayer) layer;
-                    Style style = JSimpleStyleDialog.showDialog(null, styleLayer);
+                    Style style = JSimpleStyleDialog.showDialog(tree.getMapPane(), styleLayer);
                     if (style != null) {
                         styleLayer.setStyle(style);
                     }
@@ -94,7 +100,46 @@ public class CheckBoxTreeContextMenu extends JPopupMenu {
             }
         });
         add(style);
+        addSeparator();
+
+        attribute = new JMenuItem("属性查看   ");
+        attribute.setEnabled(true);
+        attribute.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                if (node.isLeaf()) {
+                    Map childMap = (Map) node.getTreeAttribute();
+                    String file = (String) childMap.get("path");
+                    System.out.println(file);
+                    file = file.substring(0, file.lastIndexOf(".")) + ".dbf";
+                    System.out.println(file);
+                    MapTableFrame mapTableFrame = new MapTableFrame(file);
+                }
+            }
+        });
+        add(attribute);
+        addSeparator();
+
+        // bug 功能未实现
+        extent = new JMenuItem("全局查看   ");
+        extent.setEnabled(true);
+        extent.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MapContent mapContent = tree.getMapPane().getMapContent();
+                if (node.isLeaf()) {
+
+                    Map childMap = (Map) node.getTreeAttribute();
+                    Layer layer = (Layer) childMap.get("layer");
+                    ReferencedEnvelope envelope = layer.getBounds();
+                    CoordinateReferenceSystem crs = envelope.getCoordinateReferenceSystem();
+                    MapViewport viewport = new MapViewport(envelope);
+                    viewport.setCoordinateReferenceSystem(crs);
+                    mapContent.setViewport(viewport);
+                }
+            }
+        });
+        add(extent);
     }
-
-
 }

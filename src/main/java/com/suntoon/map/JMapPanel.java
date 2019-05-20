@@ -6,6 +6,7 @@ import org.geotools.coverage.grid.GridCoverage2D;
 import org.geotools.coverage.grid.io.AbstractGridFormat;
 import org.geotools.coverage.grid.io.GridCoverage2DReader;
 import org.geotools.coverage.grid.io.GridFormatFinder;
+import org.geotools.data.CachingFeatureSource;
 import org.geotools.data.FileDataStore;
 import org.geotools.data.FileDataStoreFinder;
 import org.geotools.data.shapefile.ShapefileDataStore;
@@ -139,18 +140,19 @@ public class JMapPanel extends JMapPane{
         FileDataStore dataStore = FileDataStoreFinder.getDataStore(shpFile);
         ((ShapefileDataStore) dataStore).setCharset(Charset.forName("GBK"));
         SimpleFeatureSource shapefileSource = dataStore.getFeatureSource();
+        CachingFeatureSource cache = new CachingFeatureSource(shapefileSource);
 
         // Create a basic style with yellow lines and no fill
         //Style shpStyle = SLD.createPolygonStyle(Color.BLUE, null, 0.0f);
         Style shpStyle = SLD.createSimpleStyle(shapefileSource.getSchema(), new Color(rd.nextInt(255), rd.nextInt(255), rd.nextInt(255)));
-        Layer shpLayer = new FeatureLayer(shapefileSource, shpStyle);
+        //Layer shpLayer = new FeatureLayer(shapefileSource, shpStyle);
+        Layer shpLayer = new FeatureLayer(cache, shpStyle, shpFile.getName().substring(0, shpFile.getName().lastIndexOf(".")));
         System.out.println(shpLayer.getUserData());
         return shpLayer;
     }
 
     public Layer displayRasterLayers(File rasterFile) {
         AbstractGridFormat format = GridFormatFinder.findFormat( rasterFile );
-        //this is a bit hacky but does make more geotiffs work
         Hints hints = new Hints();
         if (format instanceof GeoTiffFormat) {
             hints = new Hints(Hints.FORCE_LONGITUDE_FIRST_AXIS_ORDER, Boolean.TRUE);
@@ -160,7 +162,7 @@ public class JMapPanel extends JMapPane{
         Style rasterStyle = createRGBStyle();
 
         Layer rasterLayer = new GridReaderLayer(reader, rasterStyle);
-        rasterLayer.setTitle("raster");
+        //rasterLayer.setTitle("raster");
         return rasterLayer;
     }
 

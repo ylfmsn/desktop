@@ -5,7 +5,7 @@ import org.geotools.swing.MapPane;
 /**
  * @ProjectionName desktop
  * @ClassName ZoomOutAction
- * @Description TODO
+ * @Description 缩小操作
  * @Author YueLifeng
  * @Date 2019/5/14 0014下午 6:19
  * @Version 1.0
